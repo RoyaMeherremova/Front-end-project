@@ -1,0 +1,149 @@
+#nav-up {
+    background: #222 !important;
+
+    .up { 
+        .left {
+
+            height: 58px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
+
+            .currency {
+                color: #f5ebebe0;
+                font-size: 16px;
+                font-weight: 600;
+
+            }
+
+            i {
+                color: #bcb3b3a3;
+                font-size: 14px;
+                position: absolute;
+                top: 20px;
+                left: 37px;
+            }
+
+            .valyuta {
+                width: 220px;
+                height: 120px;
+                background-color: rgba(255, 255, 255, 0.54);
+                position: absolute;
+                top: 53px;
+                left: -3px;
+                border-radius: 5px;
+                box-shadow: rgb(0 0 0 / 8%) 0px 5px 15px;
+                display: grid;
+                align-content: center;
+
+                button {
+                    border-color: white;
+                    background-color: white;
+                    border: none;
+                    height: 56px;
+
+                    p {
+                        background-color: #EF6C00;
+                        color: white;
+                        width: 40px;
+                        font-size: 13px;
+                        margin-left: 15px;
+                        margin-top: 12px;
+                    }
+                }
+            }
+
+
+
+
+
+
+
+
+
+
+        }
+        
+
+        height: 64px;
+        display: flex;
+        text-align: center;
+
+        .language {
+            position: relative;
+            gap: 2px;
+            margin-top: 0px;
+            margin-left: 100px;
+
+            a {
+                text-decoration: none;
+
+                span {
+                    color: #c3c3c3;
+                }
+
+                img {
+                    width: 18px;
+                    height: 13px;
+                    margin-right:5px;
+                }
+
+                i {
+                    color: #c3c3c3;
+                    margin-left: 42px;
+                    position:absolute;
+                    top:2px;
+                    font-size: 13px;
+                    
+                }
+            }
+
+
+
+        }
+        
+        .language-area {
+            position: absolute;
+            background-color: white;
+           top:50px;
+           left:30px;
+            width: 221px;
+            border-radius: 6px;
+            color: #333!important;
+            font-family: Roboto,Arial,Helvetica,sans-serif;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            
+            button {
+                margin-left:5px;
+                justify-content: center;
+                width: 180px;
+                height: 48px;
+                display: flex;
+                border: none;
+                flex-direction: column;
+                background-color: white;
+                border-bottom-color: #c3c3c3;
+
+                img {
+                    position: absolute;
+                    width: 18px;
+                    height: 13px;
+                }
+
+                span {
+                    margin-left: 24px;
+                    font-size: 14px;
+                }
+
+
+
+            }
+
+           
+        }
+
+
+
+    }
+}

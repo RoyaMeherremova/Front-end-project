@@ -1,0 +1,108 @@
+#nav-up {
+  background: #222 !important;
+}
+#nav-up .up {
+  height: 64px;
+  display: flex;
+  text-align: center;
+}
+#nav-up .up .left {
+  height: 58px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+#nav-up .up .left .currency {
+  color: rgba(245, 235, 235, 0.8784313725);
+  font-size: 16px;
+  font-weight: 600;
+}
+#nav-up .up .left i {
+  color: rgba(188, 179, 179, 0.6392156863);
+  font-size: 14px;
+  position: absolute;
+  top: 20px;
+  left: 37px;
+}
+#nav-up .up .left .valyuta {
+  width: 220px;
+  height: 120px;
+  background-color: rgba(255, 255, 255, 0.54);
+  position: absolute;
+  top: 53px;
+  left: -3px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 5px 15px;
+  display: grid;
+  align-content: center;
+}
+#nav-up .up .left .valyuta button {
+  border-color: white;
+  background-color: white;
+  border: none;
+  height: 56px;
+}
+#nav-up .up .left .valyuta button p {
+  background-color: #EF6C00;
+  color: white;
+  width: 40px;
+  font-size: 13px;
+  margin-left: 15px;
+  margin-top: 12px;
+}
+#nav-up .up .language {
+  position: relative;
+  gap: 2px;
+  margin-top: 0px;
+  margin-left: 100px;
+}
+#nav-up .up .language a {
+  text-decoration: none;
+}
+#nav-up .up .language a span {
+  color: #c3c3c3;
+}
+#nav-up .up .language a img {
+  width: 18px;
+  height: 13px;
+  margin-right: 5px;
+}
+#nav-up .up .language a i {
+  color: #c3c3c3;
+  margin-left: 42px;
+  position: absolute;
+  top: 2px;
+  font-size: 13px;
+}
+#nav-up .up .language-area {
+  position: absolute;
+  background-color: white;
+  top: 50px;
+  left: 30px;
+  width: 221px;
+  border-radius: 6px;
+  color: #333 !important;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#nav-up .up .language-area button {
+  margin-left: 5px;
+  justify-content: center;
+  width: 180px;
+  height: 48px;
+  display: flex;
+  border: none;
+  flex-direction: column;
+  background-color: white;
+  border-bottom-color: #c3c3c3;
+}
+#nav-up .up .language-area button img {
+  position: absolute;
+  width: 18px;
+  height: 13px;
+}
+#nav-up .up .language-area button span {
+  margin-left: 24px;
+  font-size: 14px;
+}/*# sourceMappingURL=home.css.map */
