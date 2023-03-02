@@ -7,6 +7,57 @@
   justify-content: space-between;
   align-items: center;
 }
+#nav-up .up .hamburger-menu {
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  font-size: 20px;
+  color: #EF6C00;
+}
+#nav-up .up .sidebar {
+  width: 245px;
+  background-color: white;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100vh;
+  z-index: 5;
+  transition: all 0.4s;
+}
+#nav-up .up .sidebar .x-icon {
+  margin: 15px 0 0 15px;
+  font-size: 25px;
+  background: rgba(255, 192, 203, 0.6509803922);
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  padding: 8px 0 0 13px;
+  color: rgba(255, 0, 0, 0.4784313725);
+}
+#nav-up .up .sidebar .sidebar-list {
+  padding: 10px 0 0 20px;
+}
+#nav-up .up .sidebar .sidebar-list a {
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  font-size: 17px;
+}
+#nav-up .up .sidebar .sidebar-list .sidebar-pages-list {
+  padding: 30px;
+  width: 245px;
+  background-color: white;
+  position: absolute;
+  left: 0px;
+  top: 300px;
+  height: 200px;
+  z-index: 1;
+  overflow: scroll;
+  transition: all 0.4s;
+}
+#nav-up .up .hide-sidebar {
+  transform: translate(-260px);
+}
 #nav-up .up .left {
   height: 58px;
   display: flex;
@@ -399,6 +450,20 @@ body {
   .right {
     display: none !important;
   }
+  #nav-up {
+    height: 80px;
+  }
+  #nav-up .up {
+    justify-content: center !important;
+  }
+  #nav-up .up .left .language span {
+    display: none !important;
+  }
+  #nav-up .up .left .language i {
+    position: absolute;
+    left: -15px;
+    top: 3px;
+  }
   #nav-area .logo {
     display: flex !important;
     justify-content: center !important;
@@ -426,9 +491,58 @@ body {
   }
   .swiper-slide h1 {
     position: absolute;
-    top: 13pxipmortant;
-    bottom: 200px !important;
-    width: 239px;
-    left: -15px !important;
+    top: 33px !important;
+    left: 15px !important;
+    font-size: 29px !important;
+  }
+  .swiper-slide .sale {
+    top: 11px !important;
+    width: 100px !important;
+    font-size: 29px !important;
+  }
+  .swiper-slide .text {
+    font-size: 24px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  #nav-up {
+    height: 80px;
+  }
+  #nav-up .left {
+    left: 90px;
+  }
+  #nav-up .left .language span {
+    display: none !important;
+  }
+  #nav-up .left .language i {
+    position: absolute;
+    left: -15px;
+    top: 3px;
+  }
+  #nav-area .input-area {
+    position: relative;
+    bottom: 30px;
+  }
+  #nav-area .input-area input {
+    width: 60%;
+  }
+  #nav-area .input-area .btn-search {
+    width: 100px;
+  }
+  #nav-area .logo {
+    display: flex !important;
+    justify-content: center !important;
+  }
+  #nav-area .cal-bucket {
+    bottom: 40px;
+  }
+  #nav-area .cal-bucket .cart-phone {
+    margin-left: 15px;
+  }
+  #nav-area .cal-bucket .div-icon {
+    margin-left: 130px;
+  }
+  #nav-area .cal-bucket .cart {
+    margin-right: 190px;
   }
 }/*# sourceMappingURL=home.css.map */

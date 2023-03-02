@@ -1,6 +1,24 @@
 $(document).ready(function () {
 
 
+      
+//responsiv navbar
+
+$(document).on("click", ".hamburger-menu",function(){
+    $(".sidebar").removeClass("hide-sidebar");
+    $("#overlay").css("display","block")
+})
+
+$(document).on("click",".x-icon" ,function(){
+    $(".sidebar").addClass("hide-sidebar");
+    $("#overlay").css("display","none")
+})
+
+$(document).on("click",".sidebar-pages",function(e){
+    e.preventDefault()
+    $(".sidebar-pages-list").toggleClass("d-none");
+})
+
     //curency drop-down
 
     $(document).on("click", ".currency", function () {
