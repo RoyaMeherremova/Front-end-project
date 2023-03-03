@@ -78,4 +78,76 @@ var swiper = new Swiper(".mySwiper", {
       prevEl: ".swiper-button-prev",
     },
   });
+
+
+
+  //tab-menu-slider
+
+
+   
+const tabLink = document.querySelectorAll(".tab-menu-link");
+const tabContent = document.querySelectorAll(".tab-bar-content");
+
+tabLink.forEach((item) => {
+    item.addEventListener("click", activeTab);
+});
+
+function activeTab(item) {
+    const btnTarget = item.currentTarget;
+    const content = btnTarget.dataset.content;
+
+    tabContent.forEach((item) => {
+        item.classList.remove("is-active");
+    });
+
+    tabLink.forEach((item) => {
+        item.classList.remove("is-active");
+    });
+
+    document.querySelector("#" + content).classList.add("is-active");
+    btnTarget.classList.add("is-active");
+}
+
+
+
+
+
+//tab-menu slider
+$('.cards').slick({
+    dots: true,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+    ]
+});
+
+
 });
