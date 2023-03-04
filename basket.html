@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+   <link rel="stylesheet" href="./assets/scss/basket.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <section id="nav-up">
+            <div class="container">
+                <div class="up">
+
+                    <i class="fa-solid fa-bars hamburger-menu d-lg-none"></i>
+                    <div class="sidebar d-lg-none hide-sidebar ">
+                        <i class="fa-solid fa-xmark x-icon"></i>
+                        <hr>
+                        <div class="sidebar-list ">
+                            <a href="">
+                                <p>Home</p>
+                            </a>
+                            <a href="">
+                                <p>Contact</p>
+                            </a>
+                            <a href="">
+                                <p>About</p>
+                            </a>
+                            <a href="">
+                                <p>Blog</p>
+                            </a>
+
+                            <div class="sidebar-pages">
+                                <a href="">Pages</a>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="sidebar-pages-list d-none">
+                                <a href="">
+                                    <p>Home</p>
+                                </a>
+                                <a href="">
+                                    <p>Contact</p>
+                                </a>
+                                <a href="">
+                                    <p>About</p>
+                                </a>
+                                <a href="">
+                                    <p>Blog</p>
+                                </a>
+                                <a href="">
+                                    <p>Basket</p>
+                                </a>
+                                <a href="">
+                                    <p>Wishlist</p>
+                                </a>
+                                <a href="">
+                                    <p>Cart</p>
+                                </a>
+                                <a href="">
+                                    <p>PoductDetail</p>
+                                </a>
+                                <a href="">
+                                    <p>Checkout</p>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="left">
+                        <div class="currency">
+                            <span>USD</span>
+                            <i class="fa-solid fa-sort-down"></i>
+                        </div>
+                        <div class="valyuta d-none">
+                            <button class="usd-btn">
+                                <p>USD</p>
+                            </button>
+                            <button class="eur-btn">
+                                <p>EUR</p>
+                            </button>
+                        </div>
+                        <div class="language">
+                            <a href=""><img src="./assets/img/gb.svg" alt=""><span>English</span><i
+                                    class="fa-solid fa-sort-down"></i></a>
+
+                        </div>
+                        <div class="language-area d-none">
+                            <button><img class="englis-flag" src="./assets/img/gb.svg"
+                                    alt=""><span>English</span></button>
+                            <button><img src="./assets/img/germany.svg" alt=""><span>German</span></button>
+                            <button><img src="./assets/img/french.svg" alt=""><span>French</span></button>
+                            <button><img src="./assets/img/russian.svg" alt=""><span>Russian</span></button>
+                            <button><img src="./assets/img/turkis.svg" alt=""><span>Turkish</span></button>
+                        </div>
+                    </div>
+
+                    <div class="right">
+                        <div class="wishlist">
+                            <a href=""><i class="fa-regular fa-heart"></i></a>
+                            <a href="">WISHLIST</a>
+                        </div>
+
+                        <div class="compare">
+                            <a href=""><i class="fa-solid fa-code-compare"></i></a>
+                            <a href="">COMPARE</a>
+                        </div>
+
+                        <div class="my-account">
+                            <a href=""><i class="fa-solid fa-user"></i></a>
+                            <a href="">My Account</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section id="nav-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-md-12 col-sm-12 logo ">
+                        <div class="img-log">
+                            <img src="./assets/img/logo-white.png" alt="">
+
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="input-area">
+                            <input type="text" placeholder="Type to search..">
+                            <button class="btn-search">SEARCH</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="cal-bucket">
+
+                            <div class="div-icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="div-phone">
+                                <p>Helpline:</p>
+                                <span>02(981)336 111</span>
+                            </div>
+                            <div class="cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span class="count">0</span>
+                                <span>$0.00</span>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="spCard-dropdown d-none">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col"><a href="">
+                                            <p>CHECK CARD</p>
+                                        </a>
+                                        <p class="count">0 ITEM</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                        <p class="alert">Please add product</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+
+
+        <section id="nav-down" class="d-lg-block d-none">
+            <div class="container">
+                <div class="down">
+                    <div class="home item">
+                        <a href="">HOME</a>
+                    </div>
+                    <div class="contact item">
+                        <a href="">CONTACT</a>
+                    </div>
+                    <div class="about item">
+                        <a href="">ABOUT</a>
+                    </div>
+                    <div class="pages item">
+                        <a href="">PAGES</a>
+                    </div>
+                    <div class="pages-list d-none">
+                        <a href="">
+                            <p>Home</p>
+                        </a>
+                        <a href="">
+                            <p>Contact</p>
+                        </a>
+                        <a href="">
+                            <p>About</p>
+                        </a>
+                        <a href="">
+                            <p>Blog</p>
+                        </a>
+                        <a href="">
+                            <p>Basket</p>
+                        </a>
+                        <a href="">
+                            <p>Wishlist</p>
+                        </a>
+                        <a href="">
+                            <p>Cart</p>
+                        </a>
+                        <a href="">
+                            <p>PoductDetail</p>
+                        </a>
+                        <a href="">
+                            <p>Checkout</p>
+                        </a>
+                    </div>
+                    <div class="blog item">
+                        <a href="">BLOG</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+    </header>
+<main>
+
+    <section id="breadcrumb-section">
+<div class="container">
+<div class="row ">
+    <div class="carts">
+
+ <div class="left">
+        <h4>CART</h4>
+    </div>
+
+    <div class="right">
+        <ul>
+            <li><a href="">HOME</a></li>
+            <li><a href="">/</a></li>
+            <li><a href="">CART</a></li>
+            
+        </ul>
+   
+    </div>
+    </div>
+   
+</div>
+
+</div>
+
+
+
+    </section>
+    <section id="products">
+
+        <div class="container">
+            <div class="basket-products">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Product</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Price</th>
+                            <th scope="col" class="count">Count</th>
+                            <th scope="col">Delete</th>
+                            <th class="d-none">id</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+
+    <script src="https://kit.fontawesome.com/db0b30a76d.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/basket.js"></script>
+</body>
+</html>

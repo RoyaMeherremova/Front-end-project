@@ -111,6 +111,7 @@
                 align-content: center;
 
                 button {
+
                     border-color: white;
                     background-color: white;
                     border: none;
@@ -170,6 +171,7 @@
         }
 
         .language-area {
+
             position: absolute;
             padding-top: 3px;
             padding-bottom: 3px;
@@ -181,9 +183,10 @@
             color: #333 !important;
             font-family: Roboto, Arial, Helvetica, sans-serif;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-            z-index: 1;
+            z-index: 5;
 
             button {
+                padding-left: 8px;
                 justify-content: center;
                 width: 100%;
                 height: 48px;
@@ -359,6 +362,7 @@
         }
 
         .cart {
+            cursor: pointer;
             position: absolute;
             right: 22px;
             top: 34px;
@@ -377,10 +381,10 @@
             }
 
             .count {
-                position: absolute;
-
+               position: absolute;
                 bottom: 17px;
                 right: 29px;
+                
                 letter-spacing: 12px;
                 background-color: black;
                 border-radius: 50%;
@@ -391,9 +395,57 @@
 
             }
         }
+
+    }
+    .spCard-dropdown {
+
+        position: absolute;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        right: 32px;
+        top: 131px;
+        background-color: white;
+        width: 246px;
+        border-radius: 5px;
+        color: #333 !important;
+        font-family: Roboto, Arial, Helvetica, sans-serif;
+        box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+        z-index: 5;
+    
+        a {
+            text-decoration: none;
+    
+            p {
+               
+                top: 14px;
+                position: relative;
+                color: #444;
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+    
+        .count {
+    
+            bottom: 65px;
+            left: 180px;
+            position: absolute;
+            color: #444;
+            font-size: 14px;
+            font-weight: 500;
+        }
+    
+        .alert {
+            height: 1px;
+            position: relative;
+            left: 26px;
+            bottom: 12px;
+        }
+    
     }
 
 }
+
 
 
 
@@ -1059,13 +1111,228 @@ body {
 }
 
 
+//featured-product
+
+#featured-product {
+    margin-top: 50px;
+
+    .carts {
+        display: flex;
+
+        .cart1 {
+
+            width: 100%;
+
+            h4 {
+                position: relative;
+
+                &:before {
+                    content: "";
+                    left: 0;
+                    position: absolute;
+                    width: 100%;
+                    height: 0.0625rem;
+                    bottom: -0.65625rem;
+                    background-color: #f6f6f6;
+                }
+
+                &:after {
+                    content: "";
+                    left: 0;
+                    position: absolute;
+                    width: 2.5rem;
+                    height: 0.125rem;
+                    background-color: #222;
+                    bottom: -0.6875rem;
+                }
+            }
+        }
+
+        .img-text {
+            display: flex;
+
+            .img {
+                margin-top: 10px;
+
+                img {
+                    height: 90px;
+                    width: 90px;
+                    background-color: #F5F5F5;
+                }
+            }
+
+            .texts {
+
+                .text1 {
+                    a {
+                        text-decoration: none;
+
+                        p {
+                            margin-top: 6px;
+                            margin-left: 10px;
+                            font-weight: bold;
+                            margin-bottom: 3px;
+                            color: black;
+                        }
+                    }
+
+                }
+
+                .icons {
+                    margin-left: 10px;
+                    display: flex;
+                    font-size: 12px;
+                }
+
+                .text2 {
+
+                    p {
+                        margin-left: 10px;
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+
+
+//footer
+
+#footer {
+    background-color: #F7F7F7;
+
+    .sophia {
+        margin-top: 55px;
+
+        p {
+            line-height: 26px;
+            font-size: 16px;
+            font-weight: 400;
+            margin-top: 20px;
+        }
+
+        .link {
+            margin-top: 10px;
+
+            a {
+                text-decoration: none;
+                color: black;
+                margin-top: 5px;
+            }
+        }
+
+    }
+
+    .services {
+        margin-top: 55px;
+
+        h5 {
+
+            font-size: 22px;
+        }
+
+    }
+
+    .service-list {
+        ul {
+            padding: 0px;
+            line-height: 35px;
+
+            li {
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+
+            }
+
+        }
+
+    }
+
+    .subscribe {
+        margin-top: 55px;
+
+    }
+
+    .input {
+        margin-top: 15px;
+        height: 45px;
+        background: #fff;
+        font-size: 15px;
+        line-height: 42px;
+        border: 1px solid #e2e2e2;
+        border-radius: 4px;
+        padding: 0 65px 0 20px;
+        color: #777;
+    }
+
+    button {
+        cursor: pointer;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 700;
+        margin-top: 20px;
+        padding: 0 10px;
+        text-align: center;
+        z-index: 222;
+        color: #fff;
+        border-radius: 3px;
+        line-height: 45px;
+        width: 100%;
+        background-color: #ef6c00;
+    }
+
+    .contact-us {
+        margin-top: 55px;
+
+        .tel-box {
+            display: flex;
+            justify-content: space-between;
+
+            .email {
+                margin-right: 75px;
+            }
+        }
+
+        .icons {
+            ul {
+                display: flex;
+                justify-content: space-around;
+                margin-right: 80px;
+                padding: 0;
+                margin-top: 35px;
+
+                li {
+                    border: 1px solid black;
+                    border-radius: 50%;
+                    height: 40px;
+                    width: 40px;
+                    text-align: center;
+                    padding-top: 6px;
+
+                    a {
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+//responsivlik
 
 @media (max-width: 576px) {
     .right {
         display: none !important;
     }
 
-    //nav-up section -response
     #nav-up {
         height: 80px;
 
@@ -1074,7 +1341,6 @@ body {
 
 
             .left {
-
                 .language {
                     span {
                         display: none !important;
@@ -1093,10 +1359,8 @@ body {
     }
 
 
-    //nav-area section response
-
-
     #nav-area {
+
 
         .logo {
             display: flex !important;
@@ -1120,44 +1384,42 @@ body {
         }
     }
 
-    //slider-response
-    #slider {
-        .swiper-slide .shop {
-            width: 180px;
-            bottom: 30px;
-            left: 15px;
-        }
+    //slider
+    .swiper-slide .shop {
+        width: 180px;
+        bottom: 30px;
+        left: 15px;
+    }
 
-        .swiper-slide h3 {
-            bottom: 75px;
-            left: 16px !important;
+    .swiper-slide h3 {
+        bottom: 75px;
+        left: 16px !important;
 
-
-
-        }
-
-        .swiper-slide h1 {
-            position: absolute;
-            top: 33px !important;
-            left: 15px !important;
-            font-size: 29px !important;
-        }
-
-        .swiper-slide .sale {
-            top: 11px !important;
-            width: 100px !important;
-            font-size: 29px !important;
-
-        }
-
-        .swiper-slide .text {
-            font-size: 24px;
-        }
 
 
     }
 
-    //tab menu-response
+    .swiper-slide h1 {
+        position: absolute;
+        top: 33px !important;
+        left: 15px !important;
+        font-size: 29px !important;
+    }
+
+    .swiper-slide .sale {
+        top: 11px !important;
+        width: 100px !important;
+        font-size: 29px !important;
+
+    }
+
+    .swiper-slide .text {
+        font-size: 24px;
+    }
+
+
+
+    //tab-menu
     .main {
         .tab {
             .tab-menu-link {
@@ -1177,193 +1439,58 @@ body {
         .new-laptops {
             width: 513px;
         }
-      .right2{
-        .tablet {
-            margin-top: 10px;
-            width: 513px;
+
+        .right2 {
+            .tablet {
+                margin-top: 10px;
+                width: 513px;
+            }
+
+            .cameras {
+                margin-top: 10px;
+                width: 513px;
+            }
+
+            .offer-cameras {
+                margin-top: 10px;
+                width: 513px;
+            }
         }
 
-        .cameras {
-            margin-top: 10px;
-            width: 513px;
-        }
-
-        .offer-cameras {
-            margin-top: 10px;
-            width: 513px;
-        }
-      }
-       
     }
 
 
+    #footer{
+        .contact-us{
+            .tel-box{
+                .text{
+                    margin-right: 240px;
+                }
+                .email{
+                    p{
+                        margin-right: 80px;
 
-
+                    }
+                }
+            }
+            .icons{
+                ul{
+                    justify-content: space-between;
+                    margin-right: 350px;
+                    margin-top: 20px;
+                    li{
+                        height: 35px;
+                        width: 35px;
+                        text-align: center;
+                        padding-top: 4px;
+                    }
+                }
+            }
+        }
+        
+    }
 
 
 }
 
-
-
-
-
-@media only screen and (min-width: 576px) and (max-width: 768px) {
-    #nav-up {
-        height: 80px;
-
-        .left {
-            left: 90px;
-
-            .language {
-                span {
-                    display: none !important;
-                }
-
-                i {
-                    position: absolute;
-                    left: -15px;
-                    top: 3px;
-                }
-            }
-
-        }
-    }
-
-    #nav-area {
-
-        .input-area {
-            position: relative;
-            bottom: 30px;
-
-            input {
-                width: 60%;
-            }
-
-            .btn-search {
-                width: 100px;
-            }
-        }
-
-        .logo {
-            display: flex !important;
-            justify-content: center !important;
-        }
-
-        .cal-bucket {
-            bottom: 40px;
-
-            .cart-phone {
-                margin-left: 15px;
-            }
-
-            .div-icon {
-                margin-left: 130px;
-            }
-
-            .cart {
-                margin-right: 190px;
-            }
-        }
-    }
-
-    //slider-response
-
-     #slider{
-         .swiper-slide .shop {
-        width: 180px;
-        bottom: 30px;
-        left: 15px;
-    }
-
-    .swiper-slide h3 {
-        bottom: 75px;
-        left: 16px !important;
-
-
-
-    }
-
-    .swiper-slide h1 {
-        position: absolute;
-        top: 114px !important;
-        left: 15px !important;
-        font-size: 29px !important;
-    }
-
-    .swiper-slide .text {
-        font-size: 33px;
-    }
-
-     }
-   
-    //tab-menu-slider-response
-    .main {
-        .tab {
-            .tab-menu-link {
-                width: 27% !important;
-
-                span {
-                    font-size: 13px;
-                    color: #736c6c;
-                }
-            }
-        }
-
-    }
-
-    //baners-response
-    #banners {
-    
-        .new-laptops {
-            width: 700px;
-        }
-      .right2{
-        position: relative;
-    bottom: 336px;
-      }
-        .offer-cameras {
-         
-            width: 331px;
-            top: 26px;
-            height: 332px;
-            background-size: cover;
-            background-position: 50%;
-
-            h2 {
-                font-size: 25px;
-                font-weight: 600;
-            }
-
-            p {
-                top: 146px;
-            }
-
-            .btn-price {
-              
-             
-                bottom: 106px !important;
-                height: 47px;
-                width: 108px !important;
-            }
-        }
-        .tablet {
-            
-            top: 350px;
-            width: 357px;
-            left: 342px;
-        }
-    
-        .cameras {
-           
-            
-            left: 342px;
-       
-            width: 357px;
-        top: 358px;
-    
-        }
-    }
-
-    
-}
 
