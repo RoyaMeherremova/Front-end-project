@@ -1492,5 +1492,214 @@ body {
 
 
 }
+@media (min-width: 576px) and (max-width: 768px) {
+    #nav-up {
+        height: 80px;
+
+        .left {
+            left: 90px;
+
+            .language {
+                span {
+                    display: none !important;
+                }
+
+                i {
+                    position: absolute;
+                    left: -15px;
+                    top: 3px;
+                }
+            }
+
+        }
+    }
+
+    #nav-area {
+
+        .input-area {
+            position: relative;
+            bottom: 30px;
+
+            input {
+                width: 60%;
+            }
+
+            .btn-search {
+                width: 100px;
+            }
+        }
+
+        .logo {
+            display: flex !important;
+            justify-content: center !important;
+        }
+
+        .cal-bucket {
+            bottom: 40px;
+
+            .cart-phone {
+                margin-left: 15px;
+            }
+
+            .div-icon {
+                margin-left: 130px;
+            }
+
+            .cart {
+                margin-right: 130px;
+            }
+        }
+    }
+
+    //slider-response
 
 
+    .swiper-slide .shop {
+        width: 180px;
+        bottom: 30px;
+        left: 15px;
+    }
+
+    .swiper-slide h3 {
+        bottom: 75px;
+        left: 16px !important;
+
+
+
+    }
+
+    .swiper-slide h1 {
+        position: absolute;
+        top: 114px !important;
+        left: 15px !important;
+        font-size: 29px !important;
+    }
+
+    .swiper-slide .text {
+        font-size: 33px;
+    }
+
+
+    //tab-menu
+    .main {
+        .tab {
+            .tab-menu-link {
+                width: 27% !important;
+
+                span {
+                    font-size: 13px;
+                    color: #736c6c;
+                }
+            }
+        }
+    }
+
+
+    //baners-response
+    #banners {
+
+        .new-laptops {
+            width: 700px;
+        }
+
+        .right2 {
+            position: relative;
+            bottom: 336px;
+        }
+
+        .offer-cameras {
+
+            width: 331px;
+            top: 26px;
+            height: 332px;
+            background-size: cover;
+            background-position: 50%;
+
+            h2 {
+                font-size: 25px;
+                font-weight: 600;
+            }
+
+            p {
+                top: 146px;
+            }
+
+            .btn-price {
+
+
+                bottom: 106px !important;
+                height: 47px;
+                width: 108px !important;
+            }
+        }
+
+        .tablet {
+
+            top: 350px;
+            width: 357px;
+            left: 342px;
+        }
+
+        .cameras {
+
+
+            left: 342px;
+
+            width: 357px;
+            top: 358px;
+
+        }
+    }
+
+
+    //featured
+    .cols {
+        position: relative;
+        bottom: 310px;
+    }
+
+
+    //footer
+    .col1 {
+        position: relative;
+        bottom: 80px;
+
+    }
+
+    #footer {
+        position: relative;
+        bottom: 290px;
+
+        .col2 {
+            position: relative;
+            bottom: 65px;
+
+            .contact-us {
+                .tel-box {
+                    .text {
+                        p {
+                            margin-right: 65px;
+                        }
+                    }
+                }
+
+                .icons {
+                    position: relative;
+                    bottom: 17px;
+
+                    ul {
+                        margin-right: 170px;
+
+                        li {
+                            height: 35px;
+                            width: 35px;
+                            padding-top: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}

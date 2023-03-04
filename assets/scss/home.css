@@ -1129,4 +1129,138 @@ body {
     text-align: center;
     padding-top: 4px;
   }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  #nav-up {
+    height: 80px;
+  }
+  #nav-up .left {
+    left: 90px;
+  }
+  #nav-up .left .language span {
+    display: none !important;
+  }
+  #nav-up .left .language i {
+    position: absolute;
+    left: -15px;
+    top: 3px;
+  }
+  #nav-area .input-area {
+    position: relative;
+    bottom: 30px;
+  }
+  #nav-area .input-area input {
+    width: 60%;
+  }
+  #nav-area .input-area .btn-search {
+    width: 100px;
+  }
+  #nav-area .logo {
+    display: flex !important;
+    justify-content: center !important;
+  }
+  #nav-area .cal-bucket {
+    bottom: 40px;
+  }
+  #nav-area .cal-bucket .cart-phone {
+    margin-left: 15px;
+  }
+  #nav-area .cal-bucket .div-icon {
+    margin-left: 130px;
+  }
+  #nav-area .cal-bucket .cart {
+    margin-right: 130px;
+  }
+  .swiper-slide .shop {
+    width: 180px;
+    bottom: 30px;
+    left: 15px;
+  }
+  .swiper-slide h3 {
+    bottom: 75px;
+    left: 16px !important;
+  }
+  .swiper-slide h1 {
+    position: absolute;
+    top: 114px !important;
+    left: 15px !important;
+    font-size: 29px !important;
+  }
+  .swiper-slide .text {
+    font-size: 33px;
+  }
+  .main .tab .tab-menu-link {
+    width: 27% !important;
+  }
+  .main .tab .tab-menu-link span {
+    font-size: 13px;
+    color: #736c6c;
+  }
+  #banners .new-laptops {
+    width: 700px;
+  }
+  #banners .right2 {
+    position: relative;
+    bottom: 336px;
+  }
+  #banners .offer-cameras {
+    width: 331px;
+    top: 26px;
+    height: 332px;
+    background-size: cover;
+    background-position: 50%;
+  }
+  #banners .offer-cameras h2 {
+    font-size: 25px;
+    font-weight: 600;
+  }
+  #banners .offer-cameras p {
+    top: 146px;
+  }
+  #banners .offer-cameras .btn-price {
+    bottom: 106px !important;
+    height: 47px;
+    width: 108px !important;
+  }
+  #banners .tablet {
+    top: 350px;
+    width: 357px;
+    left: 342px;
+  }
+  #banners .cameras {
+    left: 342px;
+    width: 357px;
+    top: 358px;
+  }
+  .cols {
+    position: relative;
+    bottom: 310px;
+  }
+  .col1 {
+    position: relative;
+    bottom: 80px;
+  }
+  #footer {
+    position: relative;
+    bottom: 290px;
+  }
+  #footer .col2 {
+    position: relative;
+    bottom: 65px;
+  }
+  #footer .col2 .contact-us .tel-box .text p {
+    margin-right: 65px;
+  }
+  #footer .col2 .contact-us .icons {
+    position: relative;
+    bottom: 17px;
+  }
+  #footer .col2 .contact-us .icons ul {
+    margin-right: 170px;
+  }
+  #footer .col2 .contact-us .icons ul li {
+    height: 35px;
+    width: 35px;
+    padding-top: 5px;
+  }
 }/*# sourceMappingURL=home.css.map */
