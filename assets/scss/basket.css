@@ -1,3 +1,17 @@
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  z-index: 2;
+}
+
 #nav-up {
   background: #222 !important;
 }
@@ -356,10 +370,10 @@
 }
 #nav-down .down a {
   text-decoration: none;
-  color: black;
+  color: #383838;
 }
 #nav-down .down .item {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 14px;
   width: 155px;
   height: 100%;
@@ -367,10 +381,18 @@
   justify-content: center;
   align-items: center;
   transition: all 0.4s;
-  font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 #nav-down .down .item:hover {
   background-color: rgba(217, 213, 213, 0.5);
+}
+#nav-down .down .pages {
+  position: relative;
+}
+#nav-down .down .pages i {
+  position: absolute;
+  bottom: 27px;
+  right: 40px;
+  color: #383838;
 }
 #nav-down .down .pages-list {
   display: flex;
@@ -623,10 +645,14 @@
 }
 #footer .contact-us {
   margin-top: 55px;
+  line-height: 14px;
 }
 #footer .contact-us .tel-box {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+}
+#footer .contact-us .tel-box .text {
+  margin-left: 10px;
 }
 #footer .contact-us .tel-box .email {
   margin-right: 75px;
@@ -636,7 +662,7 @@
   justify-content: space-around;
   margin-right: 80px;
   padding: 0;
-  margin-top: 35px;
+  margin-top: 10px;
 }
 #footer .contact-us .icons ul li {
   border: 1px solid black;
@@ -644,7 +670,7 @@
   height: 40px;
   width: 40px;
   text-align: center;
-  padding-top: 6px;
+  padding-top: 10px;
 }
 #footer .contact-us .icons ul li a {
   color: black;
@@ -729,6 +755,11 @@
     margin-top: 10px;
     width: 513px;
   }
+  #footer .contact-us {
+    line-height: 14px;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.8901960784);
+  }
   #footer .contact-us .tel-box .text {
     margin-right: 240px;
   }
@@ -738,13 +769,21 @@
   #footer .contact-us .icons ul {
     justify-content: space-between;
     margin-right: 350px;
-    margin-top: 20px;
+    margin-top: 15px;
   }
   #footer .contact-us .icons ul li {
-    height: 35px;
-    width: 35px;
+    height: 40px;
+    width: 40px;
     text-align: center;
-    padding-top: 4px;
+    padding-top: 10px;
+  }
+  #footer .col1 {
+    position: relative;
+    bottom: 45px;
+  }
+  #footer .col2 {
+    position: relative;
+    bottom: 60px;
   }
 }
 @media (min-width: 576px) and (max-width: 768px) {
@@ -857,20 +896,23 @@
     position: relative;
     bottom: 80px;
   }
-  #footer {
-    position: relative;
-    bottom: 290px;
+  #footer .service-list ul {
+    line-height: 30px;
   }
   #footer .col2 {
     position: relative;
     bottom: 65px;
   }
+  #footer .col2 .contact-us {
+    line-height: 15px;
+  }
   #footer .col2 .contact-us .tel-box .text p {
     margin-right: 65px;
+    letter-spacing: -1px;
   }
   #footer .col2 .contact-us .icons {
     position: relative;
-    bottom: 17px;
+    bottom: 34px;
   }
   #footer .col2 .contact-us .icons ul {
     margin-right: 170px;

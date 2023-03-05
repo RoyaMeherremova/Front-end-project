@@ -58,6 +58,29 @@ $(document).on("click",".sidebar-pages",function(e){
         $(".language-area").addClass("d-none");
 
     })
+
+
+
+
+    //overlay
+
+    $(document).on("click", "#overlay", function () {
+        console.log($(this));
+        $(".sidebar").addClass("hide-sidebar");
+        $("#overlay").css("display", "none")
+    })
+
+
+
+
+
+     //pages
+
+    $(document).on("click",".pages" , function(e){
+        e.preventDefault();
+        $(".pages-list").removeClass("d-none");
+    })
+   
   //basket icon 
 
 
@@ -158,6 +181,8 @@ $('.cards').slick({
         // instead of a settings object
     ]
 });
+
+
 
 
 });

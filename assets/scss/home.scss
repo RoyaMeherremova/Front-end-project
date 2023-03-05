@@ -1,3 +1,19 @@
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    z-index: 2;
+  }
+
+
+
 #nav-up {
     background: #222 !important;
 
@@ -464,11 +480,11 @@
         a {
 
             text-decoration: none;
-            color: black;
+            color: #383838;
         }
 
         .item {
-            font-weight: 600;
+            font-weight: 700;
             font-size: 14px;
             width: 155px;
             height: 100%;
@@ -476,10 +492,20 @@
             justify-content: center;
             align-items: center;
             transition: all 0.4s;
-            font-family: Roboto, Arial, Helvetica, sans-serif;
+           
 
             &:hover {
                 background-color: rgb(217 213 213 / 50%);
+            }
+           
+        }
+        .pages{
+            position: relative;
+            i {
+                position: absolute;
+                bottom: 27px;
+                right: 40px;
+                color: #383838;
             }
         }
 
@@ -1492,6 +1518,9 @@ body {
 
 
 }
+
+
+
 @media (min-width: 576px) and (max-width: 768px) {
     #nav-up {
         height: 80px;
@@ -1653,7 +1682,7 @@ body {
 
 
     //featured
-    .cols {
+    .cols{
         position: relative;
         bottom: 310px;
     }
@@ -1666,30 +1695,28 @@ body {
 
     }
 
-    #footer {
+    #footer{
         position: relative;
         bottom: 290px;
-
         .col2 {
             position: relative;
             bottom: 65px;
-
+    
             .contact-us {
-                .tel-box {
-                    .text {
-                        p {
-                            margin-right: 65px;
-                        }
+               .tel-box{
+                .text{
+                    p{
+                        margin-right: 65px;
                     }
                 }
-
+               }
                 .icons {
                     position: relative;
                     bottom: 17px;
-
+    
                     ul {
                         margin-right: 170px;
-
+    
                         li {
                             height: 35px;
                             width: 35px;
@@ -1700,6 +1727,6 @@ body {
             }
         }
     }
-
+   
 
 }

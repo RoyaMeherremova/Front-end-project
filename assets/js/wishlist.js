@@ -1,21 +1,21 @@
 $(document).ready(function () {
 
-//responsiv navbar
+    //responsiv navbar
 
-$(document).on("click", ".hamburger-menu",function(){
-    $(".sidebar").removeClass("hide-sidebar");
-    $("#overlay").css("display","block")
-})
+    $(document).on("click", ".hamburger-menu", function () {
+        $(".sidebar").removeClass("hide-sidebar");
+        $("#overlay").css("display", "block")
+    })
 
-$(document).on("click",".x-icon" ,function(){
-    $(".sidebar").addClass("hide-sidebar");
-    $("#overlay").css("display","none")
-})
+    $(document).on("click", ".x-icon", function () {
+        $(".sidebar").addClass("hide-sidebar");
+        $("#overlay").css("display", "none")
+    })
 
-$(document).on("click",".sidebar-pages",function(e){
-    e.preventDefault()
-    $(".sidebar-pages-list").toggleClass("d-none");
-})
+    $(document).on("click", ".sidebar-pages", function (e) {
+        e.preventDefault()
+        $(".sidebar-pages-list").toggleClass("d-none");
+    })
 
     //curency drop-down
 
@@ -34,14 +34,14 @@ $(document).on("click",".sidebar-pages",function(e){
     $(document).on("click", ".eur-btn", function () {
         let eurText = $(".eur-btn").children().eq(0).text();
         $(".currency").children().eq(0).text(eurText);
-           $(".valyuta").addClass("d-none")
+        $(".valyuta").addClass("d-none")
     })
-    $(document).on("mouseout", ".valyuta", function (){
-      
+    $(document).on("mouseout", ".valyuta", function () {
+
     })
 
 
-     //language drop-down
+    //language drop-down
 
     $(document).on("click", ".language", function (e) {
         e.preventDefault()
@@ -58,13 +58,13 @@ $(document).on("click",".sidebar-pages",function(e){
     })
 
 
- //overlay
+    //overlay
 
- $(document).on("click", "#overlay", function () {
-    console.log($(this));
-    $(".sidebar").addClass("hide-sidebar");
-    $("#overlay").css("display", "none")
-})
+    $(document).on("click", "#overlay", function () {
+        console.log($(this));
+        $(".sidebar").addClass("hide-sidebar");
+        $("#overlay").css("display", "none")
+    })
 
 
    //pages
@@ -78,14 +78,14 @@ $(document).on("click",".sidebar-pages",function(e){
 
 
 
-$(document).on("click", "#nav-area .cart", function (e) {
-    e.preventDefault()
+    $(document).on("click", "#nav-area .cart", function (e) {
+        e.preventDefault()
 
-    $(".spCard-dropdown").toggleClass("d-none");
-    
+        $(".spCard-dropdown").toggleClass("d-none");
 
-});
- 
+
+    });
+
 
 
 
