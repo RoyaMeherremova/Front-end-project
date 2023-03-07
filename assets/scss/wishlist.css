@@ -312,13 +312,12 @@
   position: absolute;
   bottom: 17px;
   right: 29px;
-  letter-spacing: 12px;
   background-color: black;
   border-radius: 50%;
-  width: 17px;
+  width: 20px;
   font-size: 12px;
-  height: 19px;
-  padding-left: 5px;
+  height: 20px;
+  padding-left: 4px;
 }
 #nav-area .spCard-dropdown {
   position: absolute;
