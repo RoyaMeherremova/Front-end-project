@@ -110,7 +110,80 @@ function activeTab(item) {
   btnTarget.classList.add("is-active");
 }
 
+//slider-one-mini
 
+
+$('.swiper-wrapper').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 3
+  });
+
+
+
+
+//slider-two-big
+
+
+
+$('.cards').slick({
+    dots: true,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  });
+      
+
+
+let icon =document.querySelector("#product-details .photo-product .icon")
+
+$(icon).click(function(){
+  $(".modls .open").click()
+
+})
+
+$(document).on("click", "#product-details .mat-card", function(){
+ let photo= $(this).children().eq(0).attr("src")
+  $("#product-details .photo-product img").attr("src",photo)
+     
+})
+
+$(document).on("click", "#product-details .photo-product .icon", function(){
+
+ let photo = $("#product-details .photo-product img").attr("src")
+    $(".modls .modal-body img").attr("src",photo)
+      
+ })
+ 
 
 
 })

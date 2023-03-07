@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="./assets/slick-1.8.1/slick/slick.css">
     <link rel="stylesheet" href="./assets/scss/productDetail.css">
     <title>Document</title>
 </head>
@@ -238,6 +240,7 @@
 
     </header>
     <main>
+
         <section id="breadcrumb-section">
             <div class="container">
                 <div class="row ">
@@ -265,13 +268,41 @@
 
 
         </section>
+
+
         <section id="product-details">
 
             <div class="container">
                 <div class="row">
+                    <div class="modls">
+                       
+                        <button type="button" class="btn btn-primary open d-none" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">
+                            Launch static backdrop modal
+                        </button>
+
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">                                      
+                                        <img src="" alt="">
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                     <div class="col-5">
                         <div class="photo-product">
-                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                          <img src="./assets/img/headphone3.png" alt="">
+                            <i class="fa-solid fa-magnifying-glass-plus icon"></i>
                         </div>
                         <div class="swiper-wrapper">
 
@@ -315,7 +346,8 @@
                                 <h3>$175.00</h3>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                                     Ipsum has been the industrys standard dummy text ever since the 1500s, when an
-                                    unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                    unknown printer took a galley of type and scrambled it to make a type specimen
+                                    book.
                                 </p>
                             </div>
                             <p><span>Avalibility: </span><span>In Stock</span></p>
@@ -340,7 +372,7 @@
                     </div>
                     <div class="col-2">
                         <div class="info-bar">
-                            <div class="mat-card cards">
+                            <div class="mat-card cardss">
                                 <i class="fa-solid fa-gift"></i>
                                 <div class="text-mutled">
                                     <p>BONUS PLUS</p>
@@ -348,7 +380,7 @@
                                 </div>
 
                             </div>
-                            <div class="mat-card-indicator cards">
+                            <div class="mat-card-indicator cardss">
                                 <i class="fa-solid fa-truck"></i>
                                 <div class="text-mutled">
                                     <p>FREE SHIPPING</p>
@@ -356,7 +388,7 @@
                                 </div>
 
                             </div>
-                            <div class="mat-card-dollar cards">
+                            <div class="mat-card-dollar cardss">
                                 <i class="fa-solid fa-dollar-sign icon-card"></i>
                                 <div class="text-mutled">
                                     <p>MONEY BACK GUARANTEE</p>
@@ -364,7 +396,7 @@
                                 </div>
 
                             </div>
-                            <div class="mat-card-time cards time ">
+                            <div class="mat-card-time cardss time ">
                                 <i class="fa-solid fa-clock-rotate-left icon-card"></i>
                                 <div class="text-mutled">
                                     <p>ONLINE SUPPORT 24/7</p>
@@ -386,19 +418,23 @@
                     </div>
 
                 </div>
+
+
             </div>
 
         </section>
+
+
         <section id="tab-menu">
             <main class="main">
                 <div class="container">
                     <div class="col-10">
                         <div class="tab">
                             <div class="tab-menu">
-                                <button class="tab-menu-link" data-content="item-1">
+                                <button class="tab-menu-link is-active" data-content="item-1">
                                     <span data-title="item-1">Description</span>
                                 </button>
-                                <button class="tab-menu-link is-active" data-content="item-2">
+                                <button class="tab-menu-link " data-content="item-2">
                                     <span data-title="item-2">Details</span>
                                 </button>
                                 <button class="tab-menu-link" data-content="item-3">
@@ -406,41 +442,66 @@
                                 </button>
 
                             </div>
-                            <div class="tab-bar">
-                                <!-- <div class="full-desc1">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been the industrys standard dummy text ever since the 1500s, when an
-                                    unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                    It has survived not only five centuries, but also the leap into electronic
-                                    typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-                                    the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                                    with desktop publishing software like Aldus PageMaker including versions of Lorem
-                                    Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an
-                                    unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                    It has survived not only five centuries, but also the leap into electronic
-                                    typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-                                    the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                                    with desktop publishing software like Aldus PageMaker including versions of Lorem
-                                    Ipsum.
-                                </p>
-                            </div> -->
-                                <!-- <div class="full-details">
-                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                                    qui officia deserunt mollit anim id est laborum.</p>
-                                <ul>
-                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                    <li>Aenean vehicula, tortor gravida elementum tincidunt, justo lorem vestibulum ex,
-                                        eget egestas arcu tellus in magna. Vivamus gravida, ipsum vel luctus luctus,
-                                        nisi felis vestibulum est, nec interdum tellus leo quis tellus. Sed sit amet
-                                        convallis enim, in laoreet orci.</li>
+                            <div class="tab-bar-content is-active" id="item-1">
+                                <div class="full-desc1 ">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the industrys standard dummy text ever since the 1500s, when an
+                                        unknown printer took a galley of type and scrambled it to make a type specimen
+                                        book.
+                                        It has survived not only five centuries, but also the leap into electronic
+                                        typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                                        with
+                                        the release of Letraset sheets containing Lorem Ipsum passages, and more
+                                        recently
+                                        with desktop publishing software like Aldus PageMaker including versions of
+                                        Lorem
+                                        Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting
+                                        industry.
+                                        Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,
+                                        when an
+                                        unknown printer took a galley of type and scrambled it to make a type specimen
+                                        book.
+                                        It has survived not only five centuries, but also the leap into electronic
+                                        typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                                        with
+                                        the release of Letraset sheets containing Lorem Ipsum passages, and more
+                                        recently
+                                        with desktop publishing software like Aldus PageMaker including versions of
+                                        Lorem
+                                        Ipsum.
+                                    </p>
+                                </div>
+
+
+
+                            </div>
+
+                            <div class="tab-bar-content" id="item-2">
+
+                                <div class="full-details">
+                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                                        culpa
+                                        qui officia deserunt mollit anim id est laborum.</p>
+                                    <ul>
+                                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                        <li>Aenean vehicula, tortor gravida elementum tincidunt, justo lorem vestibulum
+                                            ex,
+                                            eget egestas arcu tellus in magna. Vivamus gravida, ipsum vel luctus luctus,
+                                            nisi felis vestibulum est, nec interdum tellus leo quis tellus. Sed sit amet
+                                            convallis enim, in laoreet orci.</li>
                                         <li>Donec et elit at nulla congue interdum sit amet varius erat.</li>
                                         <li>Nulla sit amet risus pellentesque, dignissim massa ut, dignissim arcu.</li>
-                                </ul>
-                            </div> -->
+                                    </ul>
+                                </div>
 
-                                <div class="full-review">
+
+                            </div>
+
+
+                            <div class="tab-bar-content " id="item-3">
+
+                                <div class="full-review" id="item-3">
                                     <div class="mat-list-item-content">
                                         <div class="mat-list-item">
                                             <img src="./assets/img/avatar-1.png" alt="">
@@ -449,7 +510,7 @@
                                             <p><span>Martina Solsker</span></p>
                                             <p><small>22 Mart, 2018 at 18:44</small> </p>
                                             <p>Integer id eros et mi fringilla imperdiet. In dictum turpis eget magna
-                                            condimentum. Ut malesuada interdum ultrices. Proin tristiqu..
+                                                condimentum. Ut malesuada interdum ultrices. Proin tristiqu..
                                             </p>
                                         </div>
                                     </div>
@@ -476,50 +537,61 @@
                                                 ullamcorper feugiat. Etiam gravida metus ac massa posuere
                                                 ve..
                                             </p>
-                                         
+
                                         </div>
-                                        </div>
-                                        <div class="form">
-                                              <h3>LEAVE YOUR REVIEW</h3>
-                                              <div class="divider"></div>
-                                              <h3> <span>Your Rating:</span><button><i class="fa-regular fa-face-frown"></i></button><i class="fa-regular fa-face-meh"></i> <button></button><button><i class="fa-solid fa-face-smile-beam"></i></button><button></button><button><i class="fa-solid fa-face-grin-wide"></i></button></h3>
-                                            <div class="right">
-                                                <h1>Contact us</h1>
-                        
-                                                <form>
-                                                    <div class="group inputs">      
-                                                      <input required type="text">
-                                                      <span class="bar"></span>
-                                                      <label>Your Name (required) *</label>
-                                                      <span class="validation">Please enter a valid message</span>
+                                    </div>
+                                    <div class="form">
+
+                                        <div class="right">
+                                            <h3>LEAVE YOUR REVIEW</h3>
+                                            <div class="divider"></div>
+                                            <p>Your email address will not be published. Required fields are marked *
+                                            </p>
+                                            <h3 class="rating"><span>Your Rating:</span>
+                                                <button><i class="fa-regular fa-face-frown icon"></i></button>
+                                                <button><i class="fa-regular fa-face-meh"></i></button>
+                                                <button><i class="fa-regular fa-face-meh"></i></button>
+                                                <button><i class="fa-regular fa-face-smile"></i></button>
+                                                <button><i class="fa-regular fa-face-grin"></i></button>
+
+                                            </h3>
+                                            <form>
+                                                <div class="user-info">
+                                                    <div class="group inputs">
+                                                        <input required type="text">
+                                                        <span class="bar"></span>
+                                                        <label>Your Name (required) *</label>
+                                                        <span class="validation">Please enter a valid message</span>
                                                     </div>
-                                                      
-                                                    <div class="group inputs">      
-                                                      <input required type="text">
-                                                      <span class="bar"></span>
-                                                      <label>Your Email (required) *</label>
-                                                      <span class="validation">Please enter a valid message</span>
+
+                                                    <div class="group inputs">
+                                                        <input required type="text">
+                                                        <span class="bar"></span>
+                                                        <label>Your Email (required) *</label>
+                                                        <span class="validation">Please enter a valid message</span>
                                                     </div>
-                        
-                                                    <div class="group inputs">      
-                                                      <input required type="text">
-                                                      <span class="bar"></span>
-                                                      <label>Subject *</label>
-                                                      <span class="validation">Please enter a valid message</span>
-                                                    </div>
-                        
-                                                    <div class="group textarea">      
-                                                      <textarea required></textarea>
-                                                      <span class="bar"></span>
-                                                      <label>Post content *</label>
-                                                    </div>
-                        
-                                                    <button type="submit">Send</button>
-                                                  </form>
-                                            </div>
+                                                </div>
+
+
+                                                <div class="group inputs">
+                                                    <input required type="text">
+                                                    <span class="bar"></span>
+                                                    <label>Subject *</label>
+                                                    <span class="validation">Please enter a valid message</span>
+                                                </div>
+
+                                                <div class="group textarea">
+                                                    <textarea required></textarea>
+                                                    <span class="bar"></span>
+                                                    <label>Post content *</label>
+                                                </div>
+
+                                                <button type="submit">Submit Review</button>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -528,12 +600,210 @@
             </main>
 
         </section>
+
+
+
+        <section id="products">
+            <div class="container">
+                <div class="title">
+                    <h4>Featured Products</h4>
+                </div>
+
+                <div class=" cards">
+
+                    <div class="product-card">
+                        <div class="img-area">
+                            <a href=""> <img src="./assets/img/headphone2.png" alt=""></a>
+                        </div>
+
+                        <div class="icons">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-eye"></i>
+                            <i class="fa-solid fa-arrows-rotate"></i>
+                        </div>
+                        <div class="card-text">
+                            <span>Headphones</span>
+                            <h4>Dono Purple Wireless</h4>
+                        </div>
+                        <div class="card-footer">
+                            <div class="star-icons">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="card-price">
+                                <span>$100.00</span>
+                            </div>
+                            <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+
+                    </div>
+
+                    <div class="product-card">
+                        <div class="img-area">
+                            <a href=""> <img src="./assets/img/headphone4.png" alt=""></a>
+                        </div>
+
+                        <div class="icons">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-eye"></i>
+                            <i class="fa-solid fa-arrows-rotate"></i>
+                        </div>
+                        <div class="card-text">
+                            <span>Headphones</span>
+                            <h4>Ultra Whitte Wireless</h4>
+                        </div>
+                        <div class="card-footer">
+                            <div class="star-icons">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="card-price">
+                                <span>$350.00</span>
+                            </div>
+                            <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+
+                    </div>
+
+                    <div class="product-card">
+                        <div class="img-area">
+                            <a href=""> <img src="./assets/img/headphone5.png" alt=""></a>
+                        </div>
+
+                        <div class="icons">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-eye"></i>
+                            <i class="fa-solid fa-arrows-rotate"></i>
+                        </div>
+                        <div class="card-text">
+                            <span>Headphones</span>
+                            <h4>Solo Headset</h4>
+                        </div>
+                        <div class="card-footer">
+                            <div class="star-icons">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="card-price">
+                                <span>$235.00</span>
+                            </div>
+                            <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+
+                    </div>
+
+                    <div class="product-card">
+                        <div class="img-area">
+                            <a href=""> <img src="./assets/img/headphone6.png" alt=""></a>
+                        </div>
+
+                        <div class="icons">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-eye"></i>
+                            <i class="fa-solid fa-arrows-rotate"></i>
+                        </div>
+                        <div class="card-text">
+                            <span>Headphones</span>
+                            <h4>ONTEC E Headset</h4>
+                        </div>
+                        <div class="card-footer">
+                            <div class="star-icons">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="card-price">
+                                <span>$175.00</span>
+                            </div>
+                            <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+
+                    </div>
+
+                    <div class="product-card">
+                        <div class="img-area">
+                            <a href=""> <img src="./assets/img/laptop1.png" alt=""></a>
+                        </div>
+
+                        <div class="icons">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-eye"></i>
+                            <i class="fa-solid fa-arrows-rotate"></i>
+                        </div>
+                        <div class="card-text">
+                            <span>Headphones</span>
+                            <h4>Wireless Mondo</h4>
+                        </div>
+                        <div class="card-footer">
+                            <div class="star-icons">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="card-price">
+                                <span>$266.00</span>
+                            </div>
+                            <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+
+                    </div>
+
+                    <div class="product-card">
+                        <div class="img-area">
+                            <a href=""> <img src="./assets/img/laptop2.png" alt=""></a>
+                        </div>
+
+                        <div class="icons">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-eye"></i>
+                            <i class="fa-solid fa-arrows-rotate"></i>
+                        </div>
+                        <div class="card-text">
+                            <span>Headphones</span>
+                            <h4>Wireless Mondo</h4>
+                        </div>
+                        <div class="card-footer">
+                            <div class="star-icons">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="card-price">
+                                <span>$266.00</span>
+                            </div>
+                            <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </section>
+
+
     </main>
     <footer>
         <section id="footer">
-            <div class="container my-5">
+            <div class="container mt-5">
                 <div class="row">
-
+                    
                     <div class="col-lg-4 col-md-6 col-sm-12 ">
                         <div class="sophia">
                             <a href=""> <img src="./assets/img/blac-logo-sophia.jfif" alt=""></a>
@@ -620,12 +890,14 @@
             </div>
         </section>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/db0b30a76d.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
         integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    <script src="./assets/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="./assets/slick-1.8.1/slick/slick.js"></script>
     <script src="./assets/js/productDetail.js"></script>
 </body>
 

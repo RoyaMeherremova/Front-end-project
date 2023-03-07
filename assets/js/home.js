@@ -114,7 +114,7 @@ var swiper = new Swiper(".mySwiper", {
 
 
 
-  //tab-menu-slider
+  //tab-menu
 
 
    
