@@ -667,6 +667,7 @@
 
             &:nth-child(6) {
                 padding-top: 38px;
+                cursor: pointer;
             }
 
             &:nth-child(5) {
@@ -751,6 +752,42 @@
 
 
     }
+
+    .show-alert{
+      .alert {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .btn-red {
+
+            background-color: #f33927;
+            height: 32px;
+            border-radius: 18px;
+            padding: 5px 12px 6px 12px;
+            color: #fff;
+        }
+
+    }
+
+    .button-shop {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .btn-orange {
+            background-color: #ef6c00;
+            display: block;
+            border-color: #ef6c00;
+            color: #fff;
+            margin-top: 20px;
+            height: 50px;
+            width: 179px;
+        }
+
+    }  
+    }
+    
 
 
 }
@@ -900,6 +937,8 @@
     }
 
 }
+
+
 
 //responsivlik
 

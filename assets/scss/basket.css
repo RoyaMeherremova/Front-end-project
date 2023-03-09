@@ -510,6 +510,7 @@
 }
 #products tbody td:nth-child(6) {
   padding-top: 38px;
+  cursor: pointer;
 }
 #products tbody td:nth-child(5) {
   padding-top: 38px;
@@ -561,6 +562,32 @@
   cursor: pointer;
   width: 181px;
   height: 49px;
+}
+#products .show-alert .alert {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#products .show-alert .alert .btn-red {
+  background-color: #f33927;
+  height: 32px;
+  border-radius: 18px;
+  padding: 5px 12px 6px 12px;
+  color: #fff;
+}
+#products .show-alert .button-shop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#products .show-alert .button-shop .btn-orange {
+  background-color: #ef6c00;
+  display: block;
+  border-color: #ef6c00;
+  color: #fff;
+  margin-top: 20px;
+  height: 50px;
+  width: 179px;
 }
 
 *,

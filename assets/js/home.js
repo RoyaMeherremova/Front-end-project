@@ -215,7 +215,7 @@ cardBtns.forEach(btn => {
       let existProduct=products.find(m=>m.id==productId)
          if(existProduct!=undefined){
            existProduct.count+=1;
-            existProduct.price=productPrice*existProduct.count;
+         
          }
          else{
             products.push({
@@ -248,4 +248,20 @@ function getBasketCount(arr){
 
 
 getBasketCount(products)
+
+
+
+
+ //SHOP-ICON-TABLE
+
+ let shopIcon=document.querySelector("#nav-area .cal-bucket .cart i")
+ 
+ let table =document.querySelector("#nav-area .spCard-dropdown .table tbody")
+shopIcon.addEventListener("click",function(){
+
+   
+
+})
+
+
 });

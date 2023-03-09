@@ -92,32 +92,41 @@ $(document).ready(function () {
 
 
 
-    //get basket-products
+    //BASKET
 
 
     let tableBody = document.querySelector("#products .basket-products .table tbody")
 
     let products = JSON.parse(localStorage.getItem("basket"));
 
-    if (products != null) {
+
+    function getBaksetDatas(){
+      if (products != null) {
         for (const product of products) {
             tableBody.innerHTML += `<tr data-id="${product.id}">
-    <td><img src="${product.img}" alt=""></td>
-    <td>${product.name}</td>
-    <td>$${product.price}</td>
-    <td>
-        <button><i class="fa-solid fa-minus"></i></button>
-        <input type="text"disabled placeholder="${product.count}">
-        <button><i class="fa-solid fa-plus"></i></button>
-    </td>
-    <td class="price">266.00</td>
+       <td><img src="${product.img}" alt=""></td>
+       <td>${product.name}</td>
+       <td>$${product.price}</td>
+       <td>
+        <button class="minus"><i class="fa-solid fa-minus"></i></button>
+        
+        <input value="${product.count}" type="text"disabled>
+        <button class="plus"><i class="fa-solid fa-plus"></i></button>
+        </td>
+    <td class="price">$${product.price * product.count}</td>
     <td><i class="fa-solid fa-x delete-icon"></i></td>
-</tr>`
+     </tr>`
         }
         getBasketCount(products);
 
+    } else {
+        showAlert()
+    }   
     }
+   
+    getBaksetDatas();
 
+    //FOR SHOP-ICON COUNT
 
     function getBasketCount(arr) {
         let sum = 0;
@@ -128,26 +137,136 @@ $(document).ready(function () {
 
     }
 
+    
 
-  //DELETE DATA FROM BASKET
 
-function deleteIdProduct(id){
-    products=products.filter(m=>m.id!=id)
+    function showAlert() {
+        document.querySelector(".basket-products .table").classList.add("d-none")
+        document.querySelector("#products .show-alert").classList.remove("d-none")
+    }
 
-    localStorage.setItem("basket",JSON.stringify(products));
-}
 
-let deleteIcons=document.querySelectorAll("#products .basket-products .table .delete-icon")
+  
 
-deleteIcons.forEach(deleteIcon => {
-    deleteIcon.addEventListener("click",function(){
-         let id =this.parentNode.parentNode.getAttribute("data-id")
-        deleteIdProduct(id)
-      this.parentNode.parentNode.remove();
+    function deleteIdProductFromBasket(id) {
+        products = products.filter(m => m.id != id)
 
-      getBasketCount(products)    
-    })
-});
+        localStorage.setItem("basket", JSON.stringify(products));
+    }
+
+
+    function deleteProduct() {
+        let deleteIcons = document.querySelectorAll("#products .basket-products .table .delete-icon")
+
+        deleteIcons.forEach(deleteIcon => {
+            deleteIcon.addEventListener("click", function () {
+                let id = this.parentNode.parentNode.getAttribute("data-id")
+                deleteIdProductFromBasket(id);
+                this.parentNode.parentNode.remove();
+                if (products.length == 0) {
+                    localStorage.removeItem("basket");
+                    showAlert();
+                }
+                getBasketCount(products)
+                showTotalPrice();
+            })
+        });
+    }
+
+    deleteProduct(); 
+
+    function showTotalPrice() {
+        let title = document.querySelector("#products .table tr td:nth-child(5) span")
+
+        let sum = 0;
+        for (const item of products) {
+            sum += parseInt(item.price * item.count)
+        }
+        title.innerHTML = "Grand total: $" + sum;
+
+
+
+    }
+
+    function decreaseProduct() {
+        let minusIcons = document.querySelectorAll("tbody tr td .minus")
+
+
+        for (const minusIcon of minusIcons) {
+
+
+
+            minusIcon.addEventListener("click", function () {
+
+                for (const product of products) {
+                    if (product.id == minusIcon.parentNode.parentNode.getAttribute("data-id")) {
+
+                        if (product.count == 1) {
+                            return;
+
+                        } else {
+
+                            minusIcon.nextElementSibling.value--;
+
+                            product.count--;
+
+                            minusIcon.parentNode.nextElementSibling.innerText = "$" + product.price * product.count;
+                        }
+                    }
+
+
+
+                }
+                localStorage.setItem("basket", JSON.stringify(products))
+                getBasketCount(products);
+                showTotalPrice();
+            })
+
+        }
+    }
+
+    function increaseProduct() {
+        let plusIcons = document.querySelectorAll("tbody tr td .plus")
+
+        for (const plusIcon of plusIcons) {
+
+            plusIcon.addEventListener("click", function () {
+
+
+                for (const product of products) {
+                    if (product.id == plusIcon.parentNode.parentNode.getAttribute("data-id")) {
+                        plusIcon.previousElementSibling.value++;
+
+                        product.count++;
+
+                        plusIcon.parentNode.nextElementSibling.innerText = "$" + product.price * product.count;
+
+
+                    }
+                    localStorage.setItem("basket", JSON.stringify(products))
+                    getBasketCount(products);
+                    showTotalPrice();
+                }
+            })
+        }
+
+
+    }
+
+    decreaseProduct();
+    increaseProduct();
+
+
+
+
+   
+
+
+
+
+
+
+
 
 
 })
