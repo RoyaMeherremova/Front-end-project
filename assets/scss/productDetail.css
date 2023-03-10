@@ -319,7 +319,7 @@
   height: 20px;
   padding-left: 4px;
 }
-#nav-area .spCard-dropdown {
+#nav-area .chek-card-box {
   position: absolute;
   padding-top: 3px;
   padding-bottom: 3px;
@@ -333,25 +333,54 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   z-index: 5;
 }
-#nav-area .spCard-dropdown a {
+#nav-area .chek-card-box a {
   text-decoration: none;
 }
-#nav-area .spCard-dropdown a p {
-  top: 14px;
+#nav-area .chek-card-box a p {
+  top: 5px;
   position: relative;
   color: #444;
   font-size: 14px;
   font-weight: 500;
 }
-#nav-area .spCard-dropdown .count {
-  bottom: 65px;
-  left: 180px;
-  position: absolute;
-  color: #444;
-  font-size: 14px;
-  font-weight: 500;
+#nav-area .chek-card-box .check-card {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-#nav-area .spCard-dropdown .alert {
+#nav-area .chek-card-box .product-detail {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px;
+}
+#nav-area .chek-card-box .product-detail .text p {
+  font-weight: 500;
+  font-size: 18px;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+#nav-area .chek-card-box .product-detail .text span {
+  color: #777;
+  font-size: 15px;
+  margin-top: 5px;
+  display: block;
+}
+#nav-area .chek-card-box .product-detail .icon i {
+  color: #c3c3c3;
+  font-size: 17px;
+  margin-top: 8px;
+}
+#nav-area .chek-card-box .subtotal {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#nav-area .chek-card-box .subtotal span {
+  font-weight: 600;
+  font-size: 18px;
+}
+#nav-area .chek-card-box .alert {
   height: 1px;
   position: relative;
   left: 26px;

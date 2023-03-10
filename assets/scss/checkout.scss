@@ -409,7 +409,7 @@ p {
         }
     }
 
-    .spCard-dropdown {
+    .chek-card-box {
 
         position: absolute;
         padding-top: 3px;
@@ -436,15 +436,54 @@ p {
             }
         }
 
-        .count {
 
-            bottom: 73px;
-            left: 180px;
-            position: absolute;
-            color: #444;
-            font-size: 14px;
-            font-weight: 500;
+        .check-card{
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
+
+        .product-detail{
+            display: flex;
+            justify-content: space-between;
+            padding: 7px;
+
+            .text{
+                p{
+                    font-weight: 500;
+                    font-size: 18px;
+                    font-family: Roboto,Arial,Helvetica,sans-serif;
+                }
+                span{
+                    color: #777;
+                    font-size: 15px;
+                    margin-top: 5px;
+                    display: block;
+                }
+            }
+            .icon{
+                i{
+                    color: #c3c3c3;
+                    font-size: 17px;
+                    margin-top: 8px;
+                }
+               
+            }
+        }
+
+        .subtotal{
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            span{
+                font-weight: 600;
+                font-size: 18px;
+            }
+        }
+
+     
 
         .alert {
             height: 1px;
@@ -452,6 +491,9 @@ p {
             left: 26px;
             bottom: 12px;
         }
+
+
+
 
     }
 }

@@ -85,6 +85,17 @@ $(document).ready(function () {
 
 
 
+    //basket icon 
+
+
+
+    $(document).on("click", "#nav-area .cart", function (e) {
+        e.preventDefault()
+
+        $(".spCard-dropdown").toggleClass("d-none");
+
+
+    });
 
 
 
@@ -105,10 +116,6 @@ inputs.forEach(input => {
         }
     })
 
-
-    // body.addEventListener("click", function(){
-    //     inputs.value = "";
-    // })
 
     input.addEventListener("keyup", function () {
         if (this.value == "") {
@@ -192,8 +199,6 @@ submit.addEventListener("click", function (event) {
 
     
 
-
-    
     //basket
 
     let cardBtns = document.querySelectorAll("#tab-menu .tab .tab-bar .cards .product-card .add-btn button");
@@ -369,6 +374,7 @@ submit.addEventListener("click", function (event) {
     }
 
     deleteIcons();
+
 
 
 
