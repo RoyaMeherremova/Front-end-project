@@ -356,7 +356,7 @@ $(document).ready(function () {
 
             chekCard.innerHTML += `
         <div class="chek-card-item" data-id = ${product.id}>
-            <div class="border"></div>
+            
             <div class="product-detail">
                 <div class="text">
                     <p>${product.name}</p>
@@ -414,14 +414,14 @@ $(document).ready(function () {
                 let id = this.parentNode.parentNode.parentNode.getAttribute("data-id")
                 deleteFromChekCard(id);
                 this.parentNode.parentNode.remove();
-                // this.parentNode.parentNode.previousElementSibling.classList.add("d-none");
-                // document.querySelector(".border").classList.add("d-none");
+
 
 
                 if (products.length == 0) {
                     localStorage.removeItem("basket")
                     document.querySelector("#nav-area .chek-card-box .alert").classList.remove("d-none")
                     document.querySelector("#nav-area .chek-card-box .subtotal").classList.add("d-none")
+                    document.querySelector("#nav-area .chek-card-box  .chek-border").classList.add("d-none")
                 }
 
             })
@@ -438,73 +438,75 @@ $(document).ready(function () {
 
     //WISHLIST
 
+    function clickIconWishlist() {
+        let heartIcon = document.querySelectorAll("#tab-menu .tab-bar .product-card .icons .heart")
 
 
-    let heartIcon = document.querySelectorAll("#tab-menu .tab-bar .product-card .icons .heart")
+        let productsWishlist = [];
+
+        if (localStorage.getItem("wishlist") != null) {
+            productsWishlist = JSON.parse(localStorage.getItem("wishlist"));
+
+        }
+        heartIcon.forEach(icon => {
+
+            icon.addEventListener("click", function (e) {
+
+                e.preventDefault();
+                let productImage = this.parentNode.parentNode.firstElementChild.firstElementChild.firstElementChild.getAttribute("src")
+
+                let productName = this.parentNode.nextElementSibling.children[1].innerText;
+
+                let productPrice = parseInt(this.parentNode.parentNode.children[3].children[1].children[0].innerText);
+
+                let productId = parseInt(this.parentNode.parentNode.getAttribute("data-id"));
+
+                let existProduct = productsWishlist.find(m => m.id == productId);
 
 
-    let productsWishlist = [];
+                if (existProduct != undefined) {
+                    productsWishlist = productsWishlist.filter(m => m.id != productId);
+                    icon.classList.add("fa-regular");
+                    icon.classList.remove("fa-solid", "added")
+                }
+                else {
+                    productsWishlist.push({
+                        id: productId,
+                        img: productImage,
+                        name: productName,
+                        price: productPrice,
 
-    if (localStorage.getItem("wishlist") != null) {
-        productsWishlist = JSON.parse(localStorage.getItem("wishlist"));
+
+                    })
+                    icon.classList.remove("fa-regular");
+                    icon.classList.add("fa-solid", "added")
+
+
+                }
+
+                localStorage.setItem("wishlist", JSON.stringify(productsWishlist));
+
+
+            })
+
+
+
+            if (productsWishlist.find(m => m.id == parseInt(icon.parentNode.parentNode.getAttribute("data-id"))) != undefined) {
+                icon.classList.remove("fa-regular");
+                icon.classList.add("fa-solid", "added");
+
+            } else {
+
+                icon.classList.add("fa-regular");
+                icon.classList.remove("fa-solid", "added");
+            }
+        });
+
+
+
 
     }
-    heartIcon.forEach(icon => {
-
-        icon.addEventListener("click", function (e) {
-
-            e.preventDefault();
-            let productImage = this.parentNode.parentNode.firstElementChild.firstElementChild.firstElementChild.getAttribute("src")
-
-            let productName = this.parentNode.nextElementSibling.children[1].innerText;
-
-            let productPrice = parseInt(this.parentNode.parentNode.children[3].children[1].children[0].innerText);
-
-            let productId = parseInt(this.parentNode.parentNode.getAttribute("data-id"));
-
-            let existProduct = productsWishlist.find(m => m.id == productId);
-
-
-            if (existProduct != undefined) {
-                productsWishlist = productsWishlist.filter(m => m.id != productId);
-                icon.classList.add("fa-regular");
-                icon.classList.remove("fa-solid", "added")
-            }
-            else {
-                productsWishlist.push({
-                    id: productId,
-                    img: productImage,
-                    name: productName,
-                    price: productPrice,
-
-
-                })
-                icon.classList.remove("fa-regular");
-                icon.classList.add("fa-solid", "added")
-
-
-            }
-
-            localStorage.setItem("wishlist", JSON.stringify(productsWishlist));
-
-
-        })
-
-
-
-        if (productsWishlist.find(m => m.id == parseInt(icon.parentNode.parentNode.getAttribute("data-id"))) != undefined) {
-            icon.classList.remove("fa-regular");
-            icon.classList.add("fa-solid", "added");
-
-        } else {
-
-            icon.classList.add("fa-regular");
-            icon.classList.remove("fa-solid", "added");
-        }
-    });
-
-
-
+    clickIconWishlist(); 
 
 
 })

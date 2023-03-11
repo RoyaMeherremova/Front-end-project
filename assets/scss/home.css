@@ -430,6 +430,7 @@
   top: 60px;
   left: 500px;
   padding: 3px 0 3px 0;
+  z-index: 2;
   border: 1px solid white;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.08) 0px 5px 15px;
@@ -681,23 +682,23 @@ body {
   display: block;
 }
 
-.product-card {
+#tab-menu .product-card {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   position: relative;
   border-radius: 5px;
 }
-.product-card .img-area {
+#tab-menu .product-card .img-area {
   display: flex;
   justify-content: center;
 }
-.product-card .img-area a {
+#tab-menu .product-card .img-area a {
   width: 70%;
   display: block;
 }
-.product-card .img-area a img {
+#tab-menu .product-card .img-area a img {
   width: 100%;
 }
-.product-card .icons {
+#tab-menu .product-card .icons {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
@@ -706,44 +707,44 @@ body {
   top: 30px;
   right: 20px;
 }
-.product-card .icons i {
+#tab-menu .product-card .icons i {
   font-size: 20px;
 }
-.product-card .icons i:hover {
+#tab-menu .product-card .icons i:hover {
   color: #EF6C00;
 }
-.product-card .icons .added {
+#tab-menu .product-card .icons .added {
   color: #EF6C00;
 }
-.product-card .card-text {
+#tab-menu .product-card .card-text {
   margin: 35px 0 0 20px;
 }
-.product-card .card-text span {
+#tab-menu .product-card .card-text span {
   color: gray;
   font-size: 14px;
 }
-.product-card .card-text h4 {
+#tab-menu .product-card .card-text h4 {
   font-size: 18px;
   text-transform: capitalize;
   line-height: 1;
 }
-.product-card .card-footer {
+#tab-menu .product-card .card-footer {
   display: flex;
   justify-content: space-between;
   margin: 13px 20px;
 }
-.product-card .card-footer .star-icons {
+#tab-menu .product-card .card-footer .star-icons {
   color: orange;
   font-size: 14px;
 }
-.product-card .card-footer .card-price {
+#tab-menu .product-card .card-footer .card-price {
   color: rgba(0, 0, 0, 0.6392156863);
   font-size: 20px;
 }
-.product-card .add-btn {
+#tab-menu .product-card .add-btn {
   margin: 13px 20px;
 }
-.product-card .add-btn button {
+#tab-menu .product-card .add-btn button {
   border: none;
   background-color: #EF6C00;
   color: white;
@@ -752,19 +753,18 @@ body {
   margin-bottom: 15px;
   font-size: 15px;
 }
-.product-card .add-btn button:hover {
+#tab-menu .product-card .add-btn button:hover {
   border: 3px solid #EF6C00;
   background-color: white;
   color: #EF6C00;
 }
-.product-card .add-btn button:hover i {
+#tab-menu .product-card .add-btn button:hover i {
   color: #EF6C00;
 }
-.product-card .add-btn button i {
+#tab-menu .product-card .add-btn button i {
   color: white;
 }
-
-.moddal {
+#tab-menu .moddal {
   position: fixed;
   top: 0;
   left: 0;
@@ -773,8 +773,7 @@ body {
   height: 100%;
   z-index: 99;
 }
-
-.modall {
+#tab-menu .modall {
   display: flex;
   width: 900px;
   height: 550px;
@@ -784,16 +783,16 @@ body {
   background-color: rgb(255, 251, 251);
   position: fixed;
 }
-.modall .img img {
+#tab-menu .modall .img img {
   width: 400px;
   margin-top: 60px;
   margin-left: 20px;
 }
-.modall .iconca {
+#tab-menu .modall .iconca {
   margin-left: 411px;
   margin-top: -27px;
 }
-.modall .iconca a {
+#tab-menu .modall .iconca a {
   text-decoration: none;
   color: white;
   font-size: 40px;
@@ -801,104 +800,104 @@ body {
   border-radius: 50%;
   background-color: red;
 }
-.modall .iconca a i {
+#tab-menu .modall .iconca a i {
   padding-left: 12px;
   width: 50px;
 }
-.modall .text1 h2 {
+#tab-menu .modall .text1 h2 {
   font-size: 40px;
 }
-.modall .texts {
+#tab-menu .modall .texts {
   display: flex;
 }
-.modall .texts .price1 del {
+#tab-menu .modall .texts .price1 del {
   font-size: 17px;
   font-weight: bold;
   color: rgb(140, 139, 139);
   text-decoration: line-through;
 }
-.modall .texts .price2 p {
+#tab-menu .modall .texts .price2 p {
   color: red;
   font-size: 25px;
   font-weight: bolder;
   margin-left: 10px;
   margin-top: -8px;
 }
-.modall .text2 p {
+#tab-menu .modall .text2 p {
   font-size: 30px;
   margin-top: -15px;
 }
-.modall .border {
+#tab-menu .modall .border {
   width: 348px;
   border: 1px dashed #f6f6f6;
   margin-top: -5px;
 }
-.modall .text3 {
+#tab-menu .modall .text3 {
   font-weight: bolder;
 }
-.modall .text3 p {
+#tab-menu .modall .text3 p {
   margin-top: 7px;
 }
-.modall .text4 p {
+#tab-menu .modall .text4 p {
   width: 350px;
   margin-top: -10px;
 }
-.modall .border {
+#tab-menu .modall .border {
   border: 1px dashed #f6f6f6;
 }
-.modall .text5 {
+#tab-menu .modall .text5 {
   display: flex;
   margin-top: 10px;
 }
-.modall .text5 .text1 p {
+#tab-menu .modall .text5 .text1 p {
   color: rgb(140, 139, 139);
 }
-.modall .text5 .text2 p {
+#tab-menu .modall .text5 .text2 p {
   font-size: 15px;
   margin-top: 1px;
   margin-left: 5px;
 }
-.modall .text6 p {
+#tab-menu .modall .text6 p {
   color: rgb(140, 139, 139);
   margin-top: -10px;
 }
-.modall .input-icon {
+#tab-menu .modall .input-icon {
   display: flex;
 }
-.modall .input-icon .inputs {
+#tab-menu .modall .input-icon .inputs {
   display: flex;
 }
-.modall .input-icon .inputs .minus {
+#tab-menu .modall .input-icon .inputs .minus {
   cursor: pointer;
 }
-.modall .input-icon .inputs .minus p {
+#tab-menu .modall .input-icon .inputs .minus p {
   font-size: 50px;
   margin-top: -26px;
 }
-.modall .input-icon .inputs input {
+#tab-menu .modall .input-icon .inputs input {
   height: 30px;
   width: 70px;
   margin-left: 10px;
   text-align: center;
 }
-.modall .input-icon .inputs .plus {
+#tab-menu .modall .input-icon .inputs .plus {
   cursor: pointer;
 }
-.modall .input-icon .inputs .plus p {
+#tab-menu .modall .input-icon .inputs .plus p {
   margin-left: 10px;
   font-size: 35px;
   margin-top: -14px;
 }
-.modall .input-icon .icons {
+#tab-menu .modall .input-icon .icons {
   display: flex;
   margin-left: 165px;
   gap: 15px;
 }
-.modall .input-icon .icons .icon1 {
+#tab-menu .modall .input-icon .icons .icon1 {
   cursor: pointer;
   color: rgb(140, 139, 139);
 }
-.modall .input-icon .icon2 {
+#tab-menu .modall .input-icon .icon2 {
   cursor: pointer;
   color: rgb(140, 139, 139);
 }

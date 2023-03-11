@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/scss/wishlist.css">
-    <title>Document</title>
+    <title>Wishlist</title>
 </head>
+
 <body>
     <div id="overlay">
 
@@ -160,16 +162,16 @@
                             <a href="basket.html">
                                 <p>CHECK CARD</p>
                             </a>
-    
+
                             <p class="count">0 ITEM</p>
                         </div>
                         <div class="border"></div>
 
                         <div class="chek-card-item d-none">
-    
-                            
+
+
                         </div>
-    
+                        <div class="border chek-border"></div>
                         <div class="subtotal d-none ">
                             <p>Subtotal:</p>
                             <span></span>
@@ -188,49 +190,49 @@
             <div class="container">
                 <div class="down">
                     <div class="home item">
-                        <a href="">HOME</a>
+                        <a href="home.html">HOME</a>
                     </div>
                     <div class="contact item">
-                        <a href="">CONTACT</a>
+                        <a href="contact.html">CONTACT</a>
                     </div>
                     <div class="about item">
-                        <a href="">ABOUT</a>
+                        <a href="about.html">ABOUT</a>
                     </div>
                     <div class="pages item">
                         <a href="">PAGES</a>
                         <i class="fa-solid fa-sort-down"></i>
                     </div>
                     <div class="pages-list d-none">
-                        <a href="">
+                        <a href="home.html">
                             <p>Home</p>
                         </a>
-                        <a href="">
+                        <a href="contact.html">
                             <p>Contact</p>
                         </a>
-                        <a href="">
+                        <a href="about.html">
                             <p>About</p>
                         </a>
-                        <a href="">
+                        <a href="blog.html">
                             <p>Blog</p>
                         </a>
-                        <a href="">
+                        <a href="basket.html">
                             <p>Basket</p>
                         </a>
-                        <a href="">
+                        <a href="wishlist.html">
                             <p>Wishlist</p>
                         </a>
                         <a href="">
                             <p>Cart</p>
                         </a>
-                        <a href="">
+                        <a href="productDetail.html">
                             <p>PoductDetail</p>
                         </a>
-                        <a href="">
+                        <a href="checkout.html">
                             <p>Checkout</p>
                         </a>
                     </div>
                     <div class="blog item">
-                        <a href="">BLOG</a>
+                        <a href="blog.html">BLOG</a>
                     </div>
                 </div>
             </div>
@@ -248,14 +250,16 @@
                     <div class="carts">
 
                         <div class="left">
-                            <h4>WISHLIST</h4>
+                            <a href="wishlist.html">
+                                <h4>WISHLIST</h4>
+                            </a>
                         </div>
 
                         <div class="right">
                             <ul>
-                                <li><a href="">HOME</a></li>
+                                <li><a href="home.html">HOME</a></li>
                                 <li><a href="">/</a></li>
-                                <li><a href="">WISHLIST</a></li>
+                                <li><a href="wishlist.html">WISHLIST</a></li>
 
                             </ul>
 
@@ -272,33 +276,39 @@
         <section id="products">
 
             <div class="container">
-                <div class="basket-products">
+                <div class="wishlist-products">
                     <table class="table">
                         <thead>
                             <tr>
                                 <th scope="col">Product</th>
                                 <th scope="col">Name</th>
                                 <th scope="col">Price</th>
-                                <th scope="col"><button class="btn btn-primary">Clear All</button></th>
+                                <th scope="col"><button class="btn btn-primary clear-btn">Clear All</button></th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td><img src="./assets/img/headphone1.png" alt=""></td>
-                                <td><a href="">Salam</a></td>
-                                <td class="price">266.00</td>
-                                <td><i class="fa-solid fa-x"></i></td>
-                            </tr>
-                            <tr class="d-none">
-                                <td><button class="btn btn-primary btn"><a href="">Continue shopping</a></button></td>
-                                <td></td>
-                                <td></td>                              
-                                <td><button class="btn btn-primary btn"> <a href="">Proceed To Checkout</a></button></td>
-                                
-                            </tr>
+
+
                         </tbody>
+                        <tr>
+                            <td><button class="btn btn-primary btn"><a href="">Continue shopping</a></button></td>
+                            <td></td>
+                            <td></td>
+                            <td><button class="btn btn-primary btn"> <a href="">Proceed To Checkout</a></button></td>
+
+                        </tr>
                     </table>
                 </div>
+                <div class="show-alert d-none">
+                    <div class="alert">
+                        <button class="btn btn-danger btn-red">YOU HAVE NO ITEMS IN YOUR SHOPPING CART.</button>
+
+                    </div>
+                    <div class="button-shop">
+                        <button class="btn btn-primary btn-orange">Continue shopping</button>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
@@ -400,4 +410,5 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./assets/js/wishlist.js"></script>
 </body>
+
 </html>

@@ -301,7 +301,7 @@ submit.addEventListener("click", function (event) {
 
             chekCard.innerHTML += `
         <div class="chek-card-item" data-id = ${product.id}>
-            <div class="border"></div>
+           
             <div class="product-detail">
                 <div class="text">
                     <p>${product.name}</p>
@@ -359,14 +359,12 @@ submit.addEventListener("click", function (event) {
                 let id = this.parentNode.parentNode.parentNode.getAttribute("data-id")
                 deleteFromChekCard(id);
                 this.parentNode.parentNode.remove();
-                // this.parentNode.parentNode.previousElementSibling.classList.add("d-none");
-                // document.querySelector(".border").classList.add("d-none");
-
-
+        
                 if (products.length == 0) {
                     localStorage.removeItem("basket")
                     document.querySelector("#nav-area .chek-card-box .alert").classList.remove("d-none")
                     document.querySelector("#nav-area .chek-card-box .subtotal").classList.add("d-none")
+                    document.querySelector("#nav-area .chek-card-box  .chek-border").classList.add("d-none")
                 }
 
             })

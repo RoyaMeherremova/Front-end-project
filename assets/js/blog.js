@@ -204,7 +204,7 @@ $(document).ready(function () {
 
             chekCard.innerHTML += `
         <div class="chek-card-item" data-id = ${product.id}>
-            <div class="border"></div>
+      
             <div class="product-detail">
                 <div class="text">
                     <p>${product.name}</p>
@@ -270,6 +270,7 @@ $(document).ready(function () {
                     localStorage.removeItem("basket")
                     document.querySelector("#nav-area .chek-card-box .alert").classList.remove("d-none")
                     document.querySelector("#nav-area .chek-card-box .subtotal").classList.add("d-none")
+                    document.querySelector("#nav-area .chek-card-box  .chek-border").classList.add("d-none")
                 }
 
             })

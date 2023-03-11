@@ -121,13 +121,13 @@ $(document).ready(function () {
                     <img src="${product.img}" alt="">
                     </td>
                     <td>${product.name}</td>
-                    <td>$ ${nativePrice}</td>
+                    <td>$ ${nativePrice}.00</td>
                     <td>
                         <button class = "minus"><i class="fa-solid fa-minus"></i></button>
                         <input value = "${product.count}" type="text"disabled>
                         <button class = "plus"><i class="fa-solid fa-plus "></i></button>
                     </td>
-                    <td class="price"> $ ${nativePrice * product.count}</td>
+                    <td class="price"> $ ${nativePrice * product.count}.00</td>
                     <td><i class="fa-solid fa-x delete-icon"></i></td>
                 </tr>`
             }
@@ -312,7 +312,7 @@ $(document).ready(function () {
 
             chekCard.innerHTML += `
         <div class="chek-card-item" data-id = ${product.id}>
-            <div class="border"></div>
+           
             <div class="product-detail">
                 <div class="text">
                     <p>${product.name}</p>
@@ -322,7 +322,7 @@ $(document).ready(function () {
                     <i class="fa-solid fa-trash-can delete-icon"></i>
                 </div>
             </div>
-            <div class="border"></div>
+            
         </div>
        `
             deleteIcons();
@@ -386,6 +386,7 @@ $(document).ready(function () {
                     localStorage.removeItem("basket")
                     document.querySelector("#nav-area .chek-card-box .alert").classList.remove("d-none")
                     document.querySelector("#nav-area .chek-card-box .subtotal").classList.add("d-none")
+                    document.querySelector("#nav-area .chek-card-box  .chek-border").classList.add("d-none")
                     showAlert();
                 }
                 getBasketCount(products);

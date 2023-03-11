@@ -430,6 +430,7 @@
   top: 60px;
   left: 500px;
   padding: 3px 0 3px 0;
+  z-index: 2;
   border: 1px solid white;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.08) 0px 5px 15px;
@@ -466,6 +467,10 @@
 #breadcrumb-section .left {
   margin-left: 22px;
 }
+#breadcrumb-section .left a {
+  text-decoration: none;
+  color: #555;
+}
 #breadcrumb-section .left h4 {
   padding-top: 5px;
   font-weight: 500;
@@ -487,17 +492,17 @@
   color: #555;
 }
 
-#products .basket-products {
+#products .wishlist-products {
   margin-top: 53px;
   box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 transparent, 0 1px 3px 0 rgba(0, 0, 0, 0.12) !important;
   border-radius: 4px;
   background: #fff;
 }
-#products .basket-products .table tr {
+#products .wishlist-products .table tr {
   display: flex;
   justify-content: center;
 }
-#products .basket-products .table tr th {
+#products .wishlist-products .table tr th {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -512,15 +517,15 @@
   border-bottom-style: solid;
   border-color: black;
 }
-#products .basket-products .table tr th button {
+#products .wishlist-products .table tr th button {
   border-color: #f33927;
   background-color: #f33927;
 }
-#products .basket-products .table tbody tr {
+#products .wishlist-products .table tbody tr {
   display: flex;
   justify-content: center;
 }
-#products .basket-products .table tbody td {
+#products .wishlist-products .table tbody td {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -532,24 +537,24 @@
   text-decoration: none;
   font-weight: 500;
 }
-#products .basket-products .table tbody td:nth-child(2) {
+#products .wishlist-products .table tbody td:nth-child(2) {
   width: 300px;
 }
-#products .basket-products .table tbody td:nth-child(3) {
+#products .wishlist-products .table tbody td:nth-child(3) {
   font-size: 21px;
   font-weight: 500;
 }
-#products .basket-products .table tbody td a {
+#products .wishlist-products .table tbody td a {
   color: rgba(0, 0, 0, 0.87);
   font-size: 1rem;
   text-decoration: none;
   font-weight: 500;
 }
-#products .basket-products .table tbody td img {
+#products .wishlist-products .table tbody td img {
   padding-left: 47px;
   height: 101px;
 }
-#products .basket-products .table tbody td .btn {
+#products .wishlist-products .table tbody td .btn {
   margin-top: 13px;
   background-color: #ef6c00;
   border-color: #ef6c00;
@@ -558,11 +563,174 @@
   width: 181px;
   height: 49px;
 }
-#products .basket-products .table tbody td .btn a {
+#products .wishlist-products .table tbody td .btn a {
   color: #fff;
   font-size: 1rem;
   text-decoration: none;
   font-weight: 500;
+}
+#products .show-alert .alert {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#products .show-alert .alert .btn-red {
+  background-color: #f33927;
+  height: 32px;
+  border-radius: 18px;
+  padding: 5px 12px 6px 12px;
+  color: #fff;
+}
+#products .show-alert .button-shop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#products .show-alert .button-shop .btn-orange {
+  background-color: #ef6c00;
+  display: block;
+  border-color: #ef6c00;
+  color: #fff;
+  margin-top: 20px;
+  height: 50px;
+  width: 179px;
+}
+#products .moddal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+#products .modall {
+  display: flex;
+  width: 900px;
+  height: 550px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  top: 10%;
+  left: 20%;
+  background-color: rgb(255, 251, 251);
+  position: fixed;
+}
+#products .modall .img img {
+  width: 400px;
+  margin-top: 60px;
+  margin-left: 20px;
+}
+#products .modall .iconca {
+  margin-left: 411px;
+  margin-top: -27px;
+}
+#products .modall .iconca a {
+  text-decoration: none;
+  color: white;
+  font-size: 40px;
+  border: 1px solid;
+  border-radius: 50%;
+  background-color: red;
+}
+#products .modall .iconca a i {
+  padding-left: 12px;
+  width: 50px;
+}
+#products .modall .text1 h2 {
+  font-size: 40px;
+}
+#products .modall .texts {
+  display: flex;
+}
+#products .modall .texts .price1 del {
+  font-size: 17px;
+  font-weight: bold;
+  color: rgb(140, 139, 139);
+  text-decoration: line-through;
+}
+#products .modall .texts .price2 p {
+  color: red;
+  font-size: 25px;
+  font-weight: bolder;
+  margin-left: 10px;
+  margin-top: -8px;
+}
+#products .modall .text2 p {
+  font-size: 30px;
+  margin-top: -15px;
+}
+#products .modall .border {
+  width: 348px;
+  border: 1px dashed #f6f6f6;
+  margin-top: -5px;
+}
+#products .modall .text3 {
+  font-weight: bolder;
+}
+#products .modall .text3 p {
+  margin-top: 7px;
+}
+#products .modall .text4 p {
+  width: 350px;
+  margin-top: -10px;
+}
+#products .modall .border {
+  border: 1px dashed #f6f6f6;
+}
+#products .modall .text5 {
+  display: flex;
+  margin-top: 10px;
+}
+#products .modall .text5 .text1 p {
+  color: rgb(140, 139, 139);
+}
+#products .modall .text5 .text2 p {
+  font-size: 15px;
+  margin-top: 1px;
+  margin-left: 5px;
+}
+#products .modall .text6 p {
+  color: rgb(140, 139, 139);
+  margin-top: -10px;
+}
+#products .modall .input-icon {
+  display: flex;
+}
+#products .modall .input-icon .inputs {
+  display: flex;
+}
+#products .modall .input-icon .inputs .minus {
+  cursor: pointer;
+}
+#products .modall .input-icon .inputs .minus p {
+  font-size: 50px;
+  margin-top: -26px;
+}
+#products .modall .input-icon .inputs input {
+  height: 30px;
+  width: 70px;
+  margin-left: 10px;
+  text-align: center;
+}
+#products .modall .input-icon .inputs .plus {
+  cursor: pointer;
+}
+#products .modall .input-icon .inputs .plus p {
+  margin-left: 10px;
+  font-size: 35px;
+  margin-top: -14px;
+}
+#products .modall .input-icon .icons {
+  display: flex;
+  margin-left: 165px;
+  gap: 15px;
+}
+#products .modall .input-icon .icons .icon1 {
+  cursor: pointer;
+  color: rgb(140, 139, 139);
+}
+#products .modall .input-icon .icon2 {
+  cursor: pointer;
+  color: rgb(140, 139, 139);
 }
 
 *,

@@ -84,24 +84,6 @@ $(document).ready(function () {
 
 
 
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
     //basket
 
     let cardBtns = document.querySelectorAll("#tab-menu .tab .tab-bar .cards .product-card .add-btn button");
@@ -204,7 +186,7 @@ $(document).ready(function () {
 
             chekCard.innerHTML += `
         <div class="chek-card-item" data-id = ${product.id}>
-            <div class="border"></div>
+          
             <div class="product-detail">
                 <div class="text">
                     <p>${product.name}</p>
@@ -262,14 +244,14 @@ $(document).ready(function () {
                 let id = this.parentNode.parentNode.parentNode.getAttribute("data-id")
                 deleteFromChekCard(id);
                 this.parentNode.parentNode.remove();
-                // this.parentNode.parentNode.previousElementSibling.classList.add("d-none");
-                // document.querySelector(".border").classList.add("d-none");
+
 
 
                 if (products.length == 0) {
                     localStorage.removeItem("basket")
                     document.querySelector("#nav-area .chek-card-box .alert").classList.remove("d-none")
                     document.querySelector("#nav-area .chek-card-box .subtotal").classList.add("d-none")
+                    document.querySelector("#nav-area .chek-card-box  .chek-border").classList.add("d-none")
                 }
 
             })
@@ -282,8 +264,83 @@ $(document).ready(function () {
 
 
 
+    //WISLIST
+
+
+    let tableBodyWislist = document.querySelector("#products .wishlist-products table tbody");
+    let wishlist = JSON.parse(localStorage.getItem("wishlist"));
+
+    function getWishlistDatas() {
+
+        if (wishlist != null) {
+            for (const product of wishlist) {
+
+                tableBodyWislist.innerHTML += `<tr data-id="${product.id}">
+            <td><img src="${product.img}" alt=""></td>
+            <td><a href="">${product.name}</a></td>
+            <td class="price">${product.price}.00</td>
+            <td><i class="fa-solid fa-x delete"></i></td>
+          </tr>`
+
+            }
+
+        } else {
+            showAlertWishlist()
+        }
+
+    }
+
+    getWishlistDatas();
+
+    function showAlertWishlist() {
+        document.querySelector(".wishlist-products .table").classList.add("d-none");
+        document.querySelector("#products .show-alert").classList.remove("d-none")
+    }
 
 
 
+    function deleteProductFromWishlistStorage(id) {
+        wishlist = wishlist.filter(m => m.id != id);
+        localStorage.setItem("wishlist", JSON.stringify(wishlist));
 
-})
+
+    }
+
+
+
+    function deleteWishlistProduct() {
+let deleteIconsWishlist = document.querySelectorAll("#products .wishlist-products table tbody .delete")
+    deleteIconsWishlist.forEach(deleteIcon => {
+        deleteIcon.addEventListener("click", function () {
+
+            let id = parseInt(this.parentNode.parentNode.getAttribute("data-id"));
+
+            deleteProductFromWishlistStorage(id);
+            this.parentNode.parentNode.remove();
+
+            if (wishlist.length == 0) {
+                showAlertWishlist()
+            }
+        })
+
+    });
+
+    }
+    deleteWishlistProduct();
+    
+
+
+    function clearAllProductsWishlist(){
+        let clearBtn=document.querySelector("#products .wishlist-products table .clear-btn")
+        clearBtn.addEventListener("click",function(){
+            localStorage.removeItem("wishlist");
+           
+            showAlertWishlist()
+        })
+    }
+
+ clearAllProductsWishlist()
+  })
+
+
+  
