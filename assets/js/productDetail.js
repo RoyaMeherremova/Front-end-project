@@ -56,41 +56,41 @@ $(document).ready(function () {
     $(".language-area").addClass("d-none");
 
   })
-    
-
-      //area kenarina toxunanda hemin hissenin silinmesi
-
-      document.addEventListener("click", function (e) {
-
-     
-        if (!!!e.target.closest(".language")) {
-            if (!$(".language-area").hasClass("d-none")) {
-                $(".language-area").addClass("d-none")
-            }
-        }
-
-         
-
-        if (!!!e.target.closest(".currency")) {
-            if (!$(".valyuta").hasClass("d-none")) {
-                $(".valyuta").addClass("d-none")
-            }
-        }
 
 
-        if (!!!e.target.closest(".cart")) {
-            if (!$(".chek-card-box").hasClass("d-none")) {
-                $(".chek-card-box").addClass("d-none")
-            }
-        }
+  //area kenarina toxunanda hemin hissenin silinmesi
 
-        if (!!!e.target.closest(".pages")) {
-            if (!$(".pages-list").hasClass("d-none")) {
-                $(".pages-list").addClass("d-none")
-            }
-        }
+  document.addEventListener("click", function (e) {
 
-    })
+
+    if (!!!e.target.closest(".language")) {
+      if (!$(".language-area").hasClass("d-none")) {
+        $(".language-area").addClass("d-none")
+      }
+    }
+
+
+
+    if (!!!e.target.closest(".currency")) {
+      if (!$(".valyuta").hasClass("d-none")) {
+        $(".valyuta").addClass("d-none")
+      }
+    }
+
+
+    if (!!!e.target.closest(".cart")) {
+      if (!$(".chek-card-box").hasClass("d-none")) {
+        $(".chek-card-box").addClass("d-none")
+      }
+    }
+
+    if (!!!e.target.closest(".pages")) {
+      if (!$(".pages-list").hasClass("d-none")) {
+        $(".pages-list").addClass("d-none")
+      }
+    }
+
+  })
 
 
 
@@ -118,7 +118,7 @@ $(document).ready(function () {
 
   //basket
 
-  let cardBtns = document.querySelectorAll("#tab-menu .tab .tab-bar .cards .product-card .add-btn button");
+  let cardBtns = document.querySelectorAll(".product-card .add-btn");
 
   let products = [];
 
@@ -135,7 +135,7 @@ $(document).ready(function () {
 
       let productImage = this.parentNode.parentNode.firstElementChild.firstElementChild.firstElementChild.getAttribute("src");
       let productName = this.parentNode.parentNode.children[2].children[1].innerText;
-      let productPrice = parseInt(this.parentNode.parentNode.children[3].children[1].children[0].innerText);
+      let productPrice = parseInt(this.parentNode.parentNode.children[3].children[1].children[1].innerText);
       let productId = parseInt(this.parentNode.parentNode.getAttribute("data-id"));
 
       let existProduct = products.find(m => m.id == productId);
@@ -384,30 +384,30 @@ $(document).ready(function () {
   let modal = document.querySelector("#products .moddal .modall");
 
 
-    for (const icon of icons) {
-      icon.addEventListener("click", function () {
+  for (const icon of icons) {
+    icon.addEventListener("click", function () {
 
-        document.querySelector(".moddal").style.display = "block"
-        document.querySelector(".modall").classList.remove("d-none")
-        document.querySelector(".moddal").classList.remove("d-none")
-        document.querySelector("#overlay").style.display = "block";
-        document.body.style.overflow = "hidden"
+      document.querySelector(".moddal").style.display = "block"
+      document.querySelector(".modall").classList.remove("d-none")
+      document.querySelector(".moddal").classList.remove("d-none")
+      document.querySelector("#overlay").style.display = "block";
+      document.body.style.overflow = "hidden"
 
-        let prodImg = icon.parentNode.parentNode.children[0].children[0].children[0].getAttribute("src");
+      let prodImg = icon.parentNode.parentNode.children[0].children[0].children[0].getAttribute("src");
 
-        let prodName = icon.parentNode.nextElementSibling.lastElementChild.innerText;
+      let prodName = icon.parentNode.nextElementSibling.lastElementChild.innerText;
 
-        let prodPrice =icon.parentNode.nextElementSibling.nextElementSibling.children[1].lastElementChild.innerText;
-        
-        modal.querySelector(".img img").setAttribute("src", prodImg);
-        modal.querySelector(".text1 h2").innerText = prodName;
-        modal.querySelector(".texts .price1 del").innerText ="$"+ prodPrice *2;
-        modal.querySelector(".text2 p").innerText = "$"+ prodPrice;
+      let prodPrice = icon.parentNode.nextElementSibling.nextElementSibling.children[1].lastElementChild.innerText;
 
-      })
-    }
+      modal.querySelector(".img img").setAttribute("src", prodImg);
+      modal.querySelector(".text1 h2").innerText = prodName;
+      modal.querySelector(".texts .price1 del").innerText = "$" + prodPrice * 2;
+      modal.querySelector(".text2 p").innerText = "$" + prodPrice;
 
-  
+    })
+  }
+
+
 
 
 
@@ -458,6 +458,99 @@ $(document).ready(function () {
 
   })
 
+
+  // home da click olunub locala elave edilen productu productdetailde gostermek
+
+
+
+
+  let productsDetail = JSON.parse(localStorage.getItem("productsDetail"));
+
+  for (const productDetail of productsDetail) {
+    document.querySelector("#breadcrumb-section .carts .left h4").innerText = productDetail.name;
+    document.querySelector("#product-details .photo-product img").setAttribute("src", productDetail.img);
+    document.querySelector("#product-details .product-area .product-info h2").innerText = productDetail.name;
+    document.querySelector("#product-details .product-area .product-info del").innerText = "$" + productDetail.price;
+    document.querySelector("#product-details .product-area .product-info h3").innerText = "$" + productDetail.price / 2;
+
+    if (products != null) {
+      for (const product of products) {
+        if (product.img == productDetail.img)
+          document.querySelector(".product-count input").value = product.count;
+      }
+    }
+
+  }
+
+  function clickIconWishlist() {
+    let heartIcons = document.querySelectorAll("#products .cards .product-card .icons .heart")
+
+    console.log(heartIcons);
+
+    let productsWishlist = [];
+
+    if (localStorage.getItem("wishlist") != null) {
+      productsWishlist = JSON.parse(localStorage.getItem("wishlist"));
+
+    }
+    heartIcons.forEach(icon => {
+
+      icon.addEventListener("click", function (e) {
+
+        e.preventDefault();
+        let productImage = this.parentNode.parentNode.firstElementChild.firstElementChild.firstElementChild.getAttribute("src")
+
+        let productName = this.parentNode.nextElementSibling.children[1].innerText;
+
+        let productPrice = parseInt(this.parentNode.parentNode.children[3].children[1].children[1].innerText);
+
+        let productId = parseInt(this.parentNode.parentNode.getAttribute("data-id"));
+
+        let existProduct = productsWishlist.find(m => m.id == productId);
+
+
+        if (existProduct != undefined) {
+          productsWishlist = productsWishlist.filter(m => m.id != productId);
+          icon.classList.add("fa-regular");
+          icon.classList.remove("fa-solid", "added")
+        }
+        else {
+          productsWishlist.push({
+            id: productId,
+            img: productImage,
+            name: productName,
+            price: productPrice,
+
+
+          })
+          icon.classList.remove("fa-regular");
+          icon.classList.add("fa-solid", "added")
+
+
+        }
+
+        localStorage.setItem("wishlist", JSON.stringify(productsWishlist));
+
+
+      })
+
+
+
+      if (productsWishlist.find(m => m.id == parseInt(icon.parentNode.parentNode.getAttribute("data-id"))) != undefined) {
+        icon.classList.remove("fa-regular");
+        icon.classList.add("fa-solid", "added");
+
+      } else {
+
+        icon.classList.add("fa-regular");
+        icon.classList.remove("fa-solid", "added");
+      }
+    });
+
+
+  }
+
+  clickIconWishlist();
 
 
 })

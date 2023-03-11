@@ -71,14 +71,14 @@ $(document).ready(function () {
 
     document.addEventListener("click", function (e) {
 
-     
+
         if (!!!e.target.closest(".language")) {
             if (!$(".language-area").hasClass("d-none")) {
                 $(".language-area").addClass("d-none")
             }
         }
 
-         
+
 
         if (!!!e.target.closest(".currency")) {
             if (!$(".valyuta").hasClass("d-none")) {
@@ -224,7 +224,7 @@ $(document).ready(function () {
 
 
 
-    // //modal
+    //modal
 
 
     let icons = document.querySelectorAll(".tab-bar .cards .product-card .icons .eye-icon");
@@ -233,10 +233,14 @@ $(document).ready(function () {
 
     let modal = document.querySelector(".tab-bar .moddal .modall");
 
+
+
+
+
     for (const card of cards) {
         for (const icon of icons) {
 
-            console.log(icon)
+
             icon.addEventListener("click", function () {
 
                 document.querySelector(".moddal").style.display = "block"
@@ -248,40 +252,18 @@ $(document).ready(function () {
                 let prodImg = icon.parentNode.previousElementSibling.firstElementChild.firstElementChild.getAttribute("src");
                 let prodName = icon.parentNode.nextElementSibling.lastElementChild.innerText;
                 let prodPrice = icon.parentNode.nextElementSibling.nextElementSibling.lastElementChild.firstElementChild.innerText;
+                let productId = icon.parentNode.parentNode.getAttribute("data-id");
                 modal.querySelector(".img img").setAttribute("src", prodImg);
                 modal.querySelector(".text1 h2").innerText = prodName;
                 modal.querySelector(".texts .price1 del").innerText = prodPrice * 2;
                 modal.querySelector(".text2 p").innerText = "$" + prodPrice;
+                modal.setAttribute("data-id", productId)
+
 
             })
         }
 
     }
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -570,4 +552,41 @@ $(document).ready(function () {
     clickIconWishlist();
 
 
+
+
+    //product detail locala add etmek ve product detailde hemin productu gostermek
+
+    let productsDetail = [];
+
+    if (localStorage.getItem("productsDetail") != null) {
+        productsDetail = JSON.parse(localStorage.getItem("productsDetail"));
+
+    }
+
+
+    let productImgs = document.querySelectorAll(".cards .img-area");
+
+    for (const productImg of productImgs) {
+        productImg.addEventListener("click", function () {
+
+            let prodImg = this.firstElementChild.firstElementChild.getAttribute("src");
+            console.log(prodImg)
+            let prodName = this.nextElementSibling.nextElementSibling.lastElementChild.innerText;
+            let prodPrice = this.nextElementSibling.nextElementSibling.nextElementSibling.lastElementChild.firstElementChild.innerText;
+
+            productsDetail.push({
+                img: prodImg,
+                name: prodName,
+                price: prodPrice
+            })
+
+            localStorage.setItem("productsDetail", JSON.stringify(productsDetail));
+
+
+        })
+    }
+
+
+  
 })
+

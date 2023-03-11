@@ -1142,6 +1142,9 @@ body {
   top: 30px;
   right: 20px;
 }
+#products .product-card .icons .added {
+  color: #EF6C00;
+}
 #products .product-card .icons i {
   font-size: 20px;
 }
