@@ -815,8 +815,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+       a{
 
-        .btn-orange {
+        text-decoration: none;
+        color: #fff;
+          .btn-orange {
             background-color: #ef6c00;
             display: block;
             border-color: #ef6c00;
@@ -825,6 +828,8 @@
             height: 50px;
             width: 179px;
         }
+       }
+      
 
     }  
     }

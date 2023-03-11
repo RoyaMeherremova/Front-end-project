@@ -56,6 +56,44 @@ $(document).ready(function () {
     $(".language-area").addClass("d-none");
 
   })
+    
+
+      //area kenarina toxunanda hemin hissenin silinmesi
+
+      document.addEventListener("click", function (e) {
+
+     
+        if (!!!e.target.closest(".language")) {
+            if (!$(".language-area").hasClass("d-none")) {
+                $(".language-area").addClass("d-none")
+            }
+        }
+
+         
+
+        if (!!!e.target.closest(".currency")) {
+            if (!$(".valyuta").hasClass("d-none")) {
+                $(".valyuta").addClass("d-none")
+            }
+        }
+
+
+        if (!!!e.target.closest(".cart")) {
+            if (!$(".chek-card-box").hasClass("d-none")) {
+                $(".chek-card-box").addClass("d-none")
+            }
+        }
+
+        if (!!!e.target.closest(".pages")) {
+            if (!$(".pages-list").hasClass("d-none")) {
+                $(".pages-list").addClass("d-none")
+            }
+        }
+
+    })
+
+
+
 
 
   //overlay
@@ -283,9 +321,12 @@ $(document).ready(function () {
 
 
   $('.swiper-wrapper').slick({
-    infinite: true,
+    infinite: false,
     slidesToShow: 3,
-    slidesToScroll: 3
+    slidesToScroll: 3,
+    arrows: true,
+    prevArrow: '<i class="fa-solid fa-chevron-left"></i>',
+    nextArrow: '<i class="fa-solid fa-chevron-right"></i>'
   });
 
 
@@ -330,6 +371,70 @@ $(document).ready(function () {
       // instead of a settings object
     ]
   });
+
+  //MODALS FOR CARDS BIG SLIDER
+
+
+
+
+
+  let icons = document.querySelectorAll("#products .cards .product-card .icons .eye-icon");
+
+
+  let modal = document.querySelector("#products .moddal .modall");
+
+
+    for (const icon of icons) {
+      icon.addEventListener("click", function () {
+
+        document.querySelector(".moddal").style.display = "block"
+        document.querySelector(".modall").classList.remove("d-none")
+        document.querySelector(".moddal").classList.remove("d-none")
+        document.querySelector("#overlay").style.display = "block";
+        document.body.style.overflow = "hidden"
+
+        let prodImg = icon.parentNode.parentNode.children[0].children[0].children[0].getAttribute("src");
+
+        let prodName = icon.parentNode.nextElementSibling.lastElementChild.innerText;
+
+        let prodPrice =icon.parentNode.nextElementSibling.nextElementSibling.children[1].lastElementChild.innerText;
+        
+        modal.querySelector(".img img").setAttribute("src", prodImg);
+        modal.querySelector(".text1 h2").innerText = prodName;
+        modal.querySelector(".texts .price1 del").innerText ="$"+ prodPrice *2;
+        modal.querySelector(".text2 p").innerText = "$"+ prodPrice;
+
+      })
+    }
+
+  
+
+
+
+  window.addEventListener("click", function (e) {
+    if (e.target == document.querySelector(".moddal")) {
+      document.querySelector(".moddal").classList.add("d-none")
+      document.querySelector(".modall").classList.add("d-none");
+      document.querySelector("#overlay").style.display = "none";
+      this.document.body.style.overflow = "unset"
+    }
+  })
+
+
+  let iconDelete = document.querySelector(".modall .iconca a i");
+  iconDelete.addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(".moddal").classList.add("d-none")
+    document.querySelector(".modall").classList.add("d-none")
+    document.querySelector("#overlay").style.display = "none";
+    document.body.style.overflow = "unset"
+  })
+
+
+
+
+
+
 
 
 

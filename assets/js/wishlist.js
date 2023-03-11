@@ -60,6 +60,45 @@ $(document).ready(function () {
         $(".language-area").addClass("d-none")
     })
 
+     
+       //area kenarina toxunanda hemin hissenin silinmesi
+
+       document.addEventListener("click", function (e) {
+
+     
+        if (!!!e.target.closest(".language")) {
+            if (!$(".language-area").hasClass("d-none")) {
+                $(".language-area").addClass("d-none")
+            }
+        }
+
+         
+
+        if (!!!e.target.closest(".currency")) {
+            if (!$(".valyuta").hasClass("d-none")) {
+                $(".valyuta").addClass("d-none")
+            }
+        }
+
+
+        if (!!!e.target.closest(".cart")) {
+            if (!$(".chek-card-box").hasClass("d-none")) {
+                $(".chek-card-box").addClass("d-none")
+            }
+        }
+
+        if (!!!e.target.closest(".pages")) {
+            if (!$(".pages-list").hasClass("d-none")) {
+                $(".pages-list").addClass("d-none")
+            }
+        }
+
+    })
+
+
+
+
+
 
 
     //overlay
@@ -285,7 +324,7 @@ $(document).ready(function () {
             }
 
         } else {
-            showAlertWishlist()
+            showAlertWishlist();
         }
 
     }
@@ -297,7 +336,7 @@ $(document).ready(function () {
         document.querySelector("#products .show-alert").classList.remove("d-none")
     }
 
-
+  
 
     function deleteProductFromWishlistStorage(id) {
         wishlist = wishlist.filter(m => m.id != id);
@@ -309,7 +348,7 @@ $(document).ready(function () {
 
 
     function deleteWishlistProduct() {
-let deleteIconsWishlist = document.querySelectorAll("#products .wishlist-products table tbody .delete")
+    let deleteIconsWishlist = document.querySelectorAll("#products .wishlist-products table tbody .delete")
     deleteIconsWishlist.forEach(deleteIcon => {
         deleteIcon.addEventListener("click", function () {
 
@@ -319,6 +358,7 @@ let deleteIconsWishlist = document.querySelectorAll("#products .wishlist-product
             this.parentNode.parentNode.remove();
 
             if (wishlist.length == 0) {
+                localStorage.removeItem("wishlist")
                 showAlertWishlist()
             }
         })

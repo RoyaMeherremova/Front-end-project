@@ -31,6 +31,7 @@ $(document).ready(function () {
         $(".language-area").addClass("d-none")
     })
 
+
     $(document).on("click", ".usd-btn", function () {
         let usdText = $(".usd-btn").children().eq(0).text();
         $(".currency").children().eq(0).text(usdText);
@@ -42,6 +43,9 @@ $(document).ready(function () {
         $(".currency").children().eq(0).text(eurText);
         $(".valyuta").addClass("d-none")
     })
+
+
+
 
 
 
@@ -62,6 +66,44 @@ $(document).ready(function () {
 
 
 
+
+    //area kenarina toxunanda hemin hissenin silinmesi
+
+    document.addEventListener("click", function (e) {
+
+     
+        if (!!!e.target.closest(".language")) {
+            if (!$(".language-area").hasClass("d-none")) {
+                $(".language-area").addClass("d-none")
+            }
+        }
+
+         
+
+        if (!!!e.target.closest(".currency")) {
+            if (!$(".valyuta").hasClass("d-none")) {
+                $(".valyuta").addClass("d-none")
+            }
+        }
+
+
+        if (!!!e.target.closest(".cart")) {
+            if (!$(".chek-card-box").hasClass("d-none")) {
+                $(".chek-card-box").addClass("d-none")
+            }
+        }
+
+        if (!!!e.target.closest(".pages")) {
+            if (!$(".pages-list").hasClass("d-none")) {
+                $(".pages-list").addClass("d-none")
+            }
+        }
+
+    })
+
+
+
+
     //overlay
 
     $(document).on("click", "#overlay", function () {
@@ -79,14 +121,6 @@ $(document).ready(function () {
         e.preventDefault();
         $(".pages-list").removeClass("d-none");
     })
-
-
-
-
-
-
-
-
 
 
 
@@ -190,7 +224,7 @@ $(document).ready(function () {
 
 
 
-    //modal
+    // //modal
 
 
     let icons = document.querySelectorAll(".tab-bar .cards .product-card .icons .eye-icon");
@@ -201,6 +235,8 @@ $(document).ready(function () {
 
     for (const card of cards) {
         for (const icon of icons) {
+
+            console.log(icon)
             icon.addEventListener("click", function () {
 
                 document.querySelector(".moddal").style.display = "block"
@@ -210,7 +246,6 @@ $(document).ready(function () {
                 document.body.style.overflow = "hidden"
 
                 let prodImg = icon.parentNode.previousElementSibling.firstElementChild.firstElementChild.getAttribute("src");
-
                 let prodName = icon.parentNode.nextElementSibling.lastElementChild.innerText;
                 let prodPrice = icon.parentNode.nextElementSibling.nextElementSibling.lastElementChild.firstElementChild.innerText;
                 modal.querySelector(".img img").setAttribute("src", prodImg);
@@ -222,6 +257,32 @@ $(document).ready(function () {
         }
 
     }
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -506,7 +567,7 @@ $(document).ready(function () {
 
 
     }
-    clickIconWishlist(); 
+    clickIconWishlist();
 
 
 })

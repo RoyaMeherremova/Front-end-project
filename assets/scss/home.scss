@@ -878,6 +878,13 @@ body {
         position: relative;
         border-radius: 5px;
 
+
+        &:hover {
+            .icons {
+                display: flex;
+            }
+        }
+
         .img-area {
 
             display: flex;
@@ -901,9 +908,12 @@ body {
             position: absolute;
             top: 30px;
             right: 20px;
+            display: none;
 
             i {
                 font-size: 20px;
+                cursor: pointer;
+                transition: all 0.5s;
 
                 &:hover {
                     color: #EF6C00;
@@ -988,6 +998,9 @@ body {
 
 
     }
+
+ 
+   
 
 
     //modal
@@ -1189,7 +1202,14 @@ body {
 
 }
 
+.slick-slide {
+    width: 225px !important;
 
+}
+
+.slick-track {
+    width: 2048px !important;
+}
 
 //banners
 #banners {

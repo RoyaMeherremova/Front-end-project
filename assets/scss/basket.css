@@ -610,7 +610,11 @@
   justify-content: center;
   align-items: center;
 }
-#products .show-alert .button-shop .btn-orange {
+#products .show-alert .button-shop a {
+  text-decoration: none;
+  color: #fff;
+}
+#products .show-alert .button-shop a .btn-orange {
   background-color: #ef6c00;
   display: block;
   border-color: #ef6c00;
